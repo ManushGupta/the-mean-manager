@@ -1,0 +1,162 @@
+
+<div class="container">
+	<a ui-sref="about" class="nav-link">About</a>
+	<h2>Todo App</h2>
+	<form ng-submit="createTask()">
+		<input class="form-control todos__create-input" placeholder="what do i need to do?" ng-model="createTaskInput"/>
+		<button class="btn btn-success todos__create-button">Create Task</button>
+	</form>
+	<span>Count {{filtered.length}}</span>
+	<button id="someButton">Export</button>
+	<div id="printTable">
+	<table class="table table-striped">
+		<tr>
+			<th>Completed?</th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Serial No" ng-model="search.SrNo"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="NIMS ID" ng-model="search.NIMS_ID"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="k" ng-model="search.k"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Tiger ID" ng-model="search.tigerid"></input></form></th>    
+			<th><form class="form-inline"><input class="form-control" placeholder="REPC_SERVICE_ABBR" ng-model="search.REPC_SERVICE_ABBR"></input></form></th>
+			<th>
+				<!--form class="form-inline"><input class="form-control" placeholder="CIRCUIT_ISSUE_DATE" ng-model="timeRange.CIRCUIT_ISSUE_DATE"></input></form-->
+				<div class="input-group date" data-provide="datepicker">
+					<input type="text" class="form-control" id="startDate" ng-model="startDate">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-th"></span>
+					</div>
+				</div>
+				<div class="input-group date" data-provide="datepicker">
+					<input type="text" class="form-control" id="endDate" ng-model="endDate">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-th"></span>
+					</div>
+				</div>
+			</th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Pending With" ng-model="search.pending_with"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Assigned" ng-model="search.Assigned"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Status" ng-model="search.Pending"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Remarks" ng-model="search.reason_of_pending"></input></form></th>
+			<th>Actions</th>
+		</tr>
+		<tr ng-repeat='todo in filtered = (todos | filter: search | filter : todoFilter:dateFrom:dateTo)'>
+			<td><input type="checkbox" ng-checked="todo.isCompleted" ng-click="onCompletedClick(todo)"/></td>
+			<td>
+				<span class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.SrNo}}
+				</span>
+			</td>
+			<td>
+				<span class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.NIMS_ID}}
+				</span>
+			</td>
+			<td>
+				<span class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.k}}
+				</span>
+			</td>
+			<td>
+				<span class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.tigerid}}
+				</span>
+			</td>
+			<td>
+				<span
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.REPC_SERVICE_ABBR}}
+				</span>
+			</td>
+			<td>
+				<span class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.CIRCUIT_ISSUE_DATE}}
+				</span>
+			</td>
+			<td>
+				<span ng-if="!todo.isEditing" 
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.pending_with}}
+				</span>
+				<form ng-submit="updateTask(todo)">
+					<select ng-if="todo.isEditing" class="form-control todos_update-input" ng-value="todo.pending_with" ng-model="todo.updatedTask1">
+						<option>SDCNOC</option>
+						<option>BOP</option>
+						<option>FNOC</option>
+						<option>SDNW</option>
+						<option>OPS</option>
+						<option>PM</option>
+						<option>Engg</option>
+						<option>ACE</option>
+					</select> 	
+				</form>
+			</td>
+			<td>
+				<span ng-if="!todo.isEditing" 
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.Assigned}}
+				</span>
+				<form ng-submit="updateTask(todo)">
+					<select ng-if="todo.isEditing" class="form-control todos_update-input" ng-value="todo.Assigned" ng-model="todo.updatedTask2">
+						<option>Saurabh.A</option>
+						<option>Amol</option>
+						<option>Shashank</option>
+						<option>Gaurav.S</option>
+						<option>Saurabh.G</option>
+						<option>Harendra</option>
+						<option>Rohan</option>
+						<option>Abhilasha</option>
+						<option>Rahul</option>
+						<option>Swapnali</option>
+						<option>Raj</option>
+					</select> 	
+				</form>
+			</td>
+			<td>
+				<span ng-if="!todo.isEditing"
+					class="todos__task"
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.Pending}}
+				</span>
+				<form ng-submit="updateTask(todo)">
+					<select ng-if="todo.isEditing" class="form-control todos_update-input" ng-value="todo.Pending" ng-model="todo.updatedTask3">
+						<option>Pending</option>
+						<option>Completed</option>
+					</select>
+				</form>
+			</td>
+			<td>
+				<span ng-if="!todo.isEditing"
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.reason_of_pending}}
+				</span>
+				<form ng-submit="updateTask(todo)">
+					<input ng-if="todo.isEditing" class="form-control todos__update-input" ng-value="todo.reason_of_pending" ng-model="todo.updatedTask4">
+				</form>
+			</td>
+			<td>
+				<button ng-if="!todo.isEditing" class="btn btn-info" ng-click="onEditClick(todo)">Edit</button>
+				<button ng-if="!todo.isEditing" class="btn btn-danger" ng-click="deleteTask(todo)">Delete</button>
+
+				<button ng-if="todo.isEditing" class="btn btn-primary" ng-click="updateTask(todo)">Save</button>
+				<button ng-if="todo.isEditing" class="btn btn-default" ng-click="onCancelClick(todo)">Cancel</button>
+			</td>
+		</tr>
+	</table>
+	</div>
+
+
+</div>
+<script type="text/javascript">
+   	//$('#someButtton').on('click', function(){ CSV.begin("#printTable").download("HelloWorld.csv").go(); });
+   	$( "#someButton" ).click(function() {
+  		CSV.begin("#printTable").download("HelloWorld.csv").go();
+	});
+</script>
