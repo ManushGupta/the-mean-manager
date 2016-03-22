@@ -1,13 +1,10 @@
 import angular from 'angular';
 import moment from 'moment';
 const todoFilter = angular.module('app.todoFilter',[])
-.filter('todoFilter', () => {
-
-	function dateFilter (){
-
-		console.log("todo-filter is working");
-	}
-
+.filter('todoFilter', function() {
+  return function() {
+    return console.log("filter works")
+  };
 });
 
 export default todoFilter;

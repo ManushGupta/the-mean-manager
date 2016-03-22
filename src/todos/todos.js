@@ -1,7 +1,7 @@
 import _ from 'lodash';	
 import moment from 'moment';
 
-export default function($scope, todoFactory, todoFilter){
+export default function($scope, todoFactory, $filter){
 
     let params = {
         createHasInput: false,
@@ -23,7 +23,7 @@ export default function($scope, todoFactory, todoFilter){
 	//	}
 	//];
 
-
+	$filter('todoFilter')();
 
 	todoFactory.getTasks($scope);
 
