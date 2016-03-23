@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'); 
 var Todo = require('server/db/db').Todo;
 var express = require('express');
 var router = express.Router();
@@ -23,7 +23,7 @@ router.post('/', function(req, res) {
 router.put('/:id', function (req,res) {
 	var id = req.params.id;
 	Todo.update( {_id : mongoose.Types.ObjectId(id)}, {
-        $set: { pending_with: req.body.pending_with , Assigned: req.body.Assigned , Pending: req.body.Pending , reason_of_pending: req.body.reason_of_pending }
+        $set: { dependency_owner: req.body.dependency_owner , startDepDate: req.body.startDepDate , endDepDate: req.body.endDepDate , remarks: req.body.remarks , assigned: req.body.assigned , order_status: req.body.order_status , vp_approval: req.body.vp_approval, configCompDate: req.body.configCompDate, testCompDate: req.body.testCompDate, hanging_deletion: req.body.hanging_deletion}
     }, function (err) {
         if (err) { console.log(err); }
 

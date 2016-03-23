@@ -1,12 +1,5 @@
 import angular from 'angular';
 
-function parseDate(input) {
-		var parts = input.split('-');
-		// Note: months are 0-based
-		return new Date(parts[2], parts[1]-1, parts[0]); 
-	}
-	
-
 const todoFactory = angular.module('app.todoFactory',[])
 
 .factory('todoFactory', ($http) => {
@@ -42,7 +35,7 @@ const todoFactory = angular.module('app.todoFactory',[])
 		//todo.task = todo.updatedTask;
 		//todo.isEditing = false;
 
-		$http.put(`/todos/${todo._id}`, { pending_with: todo.updatedTask1, Assigned: todo.updatedTask2, Pending : todo.updatedTask3, reason_of_pending : todo.updatedTask4}).success(
+		$http.put(`/todos/${todo._id}`, { dependency_owner: todo.updatedTask1, startDepDate: todo.updatedTask2, endDepDate : todo.updatedTask3, remarks : todo.updatedTask4, assigned : todo.updatedTask5, order_status : todo.updatedTask6, vp_approval : todo.updatedTask7, configCompDate : todo.updatedTask8, testCompDate : todo.updatedTask9, hanging_deletion : todo.updatedTask10}).success(
 			response => {
 				getTasks($scope);
 				todo.isEditing = false;
@@ -80,7 +73,6 @@ const todoFactory = angular.module('app.todoFactory',[])
 		deleteTask,
 		watchCreateTaskInput
 	};
-});
-
+})
 
 export default todoFactory;
