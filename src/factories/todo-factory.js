@@ -9,6 +9,7 @@ const todoFactory = angular.module('app.todoFactory',[])
 
 		$http.get('/todos').success(response => {
 			$scope.todos = response.todos;
+			console.log($scope.todos);
 		});
 	}
 

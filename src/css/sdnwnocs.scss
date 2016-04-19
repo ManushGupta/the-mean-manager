@@ -1,0 +1,38 @@
+.sdnwnocs {
+	&__create-input {
+		margin: 0 auto 5px;
+		width: 300px;
+	}
+
+	&__create-button {
+		display: block;
+		margin: 0 auto 20px;
+
+	}
+
+	&__task {
+		&--completed {
+			text-decoration: line-through;
+		}
+	}
+
+	&__update-input {
+		margin : 0 auto;
+		width: 300px;
+	}
+}
+
+th,td {
+	font-size: 15px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	min-width: 100px;
+}
+
+.container {
+	min-width: 3800px;
+}
+
+input {
+	max-width: 380px;
+}

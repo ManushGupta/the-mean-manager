@@ -1,57 +1,57 @@
 
 <div class="container">
-	<a ui-sref="about" class="nav-link">About</a>
+	<h2><a ui-sref="main" class="nav-link">Main</a></h2>
 	<h2>The Mean Manager</h2>
 	<form ng-submit="createTask()">
 		<input class="form-control todos__create-input" placeholder="what do i need to do?" ng-model="createTaskInput"/>
 		<button class="btn btn-success todos__create-button">Create Task</button>
 	</form>
 
-	<span style="float: left; padding: 20px"> Crammer <input style="float: left" type="checkbox" ng-click="onCrammerClick()" checked/></span>
-	<span style="float: left; padding: 20px"> Viznet <input style="float: left" type="checkbox" ng-click="onViznetClick()" checked/></span>
-	<span style="float: left; padding: 20px"> M6 <input style="float: left" type="checkbox" ng-click="onM6Click()" checked/></span>
-	<span style="float: left; padding: 20px"> BPM IOR <input style="float: left" type="checkbox" ng-click="onBPM_IORClick()" checked/></span>
-	<span style="float: left; padding: 20px"> BPM NCCM <input style="float: left" type="checkbox" ng-click="onBPM_NCCMClick()" checked/></span>
-
+	<span style="float: left; padding: 20px; margin-left: 3%;"> Crammer <input style="float: left" type="checkbox" ng-click="onCrammerClick()" checked/></span>
+	<span style="float: left; padding: 20px; margin-left: 3%;"> Viznet <input style="float: left" type="checkbox" ng-click="onViznetClick()" checked/></span>
+	<span style="float: left; padding: 20px; margin-left: 3%;"> M6 <input style="float: left" type="checkbox" ng-click="onM6Click()" checked/></span>
+	<span style="float: left; padding: 20px; margin-left: 3%;"> BPM IOR <input style="float: left" type="checkbox" ng-click="onBPM_IORClick()" checked/></span>
+	<span style="float: left; padding: 20px; margin-left: 3%;"> BPM NCCM <input style="float: left" type="checkbox" ng-click="onBPM_NCCMClick()" checked/></span>
+	<!--span style="float: left; padding: 20px"><button style="float: left" type="checkbox"> Generate Report</button></span-->
 	
-	<span>Count {{filtered.length}}</span>
-	<button id="someButton">Export</button>
+	<span style="position : fixed; margin-top: -10px">Count {{filtered.length}} <button style="float: left" id="someButton">Export</button></span>
+	
 
 	<div id="printTable">
 	<table class="table table-striped">
 		<tr>
 			<th>Completed?</th>
-			<th ng-show="isCrammerChecked || isViznetChecked || isBPM_IORChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Serial No" ng-model="search.SrNo"></input></form></th>
-			<th ng-show="isCrammerChecked"><form class="form-inline"><input class="form-control" placeholder="NIMS ID" ng-model="search.nims_id"></input></form></th>
+			<th ng-show="isCrammerChecked || isViznetChecked || isBPM_IORChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Serial No" ng-model="search.SrNo">SrNo</input></form></th>
+			<th ng-show="isCrammerChecked"><form class="form-inline"><input class="form-control" placeholder="NIMS ID" ng-model="search.nims_id">NIMS ID</input></form></th>
 
-			<th ng-show="isCrammerChecked"><form class="form-inline"><input class="form-control" placeholder="Tiger ID" ng-model="search.tiger_id"></input></form></th>
-			<th ng-show="isViznetChecked"><form class="form-inline"><input class="form-control" placeholder="Viznet ID" ng-model="search.viznet_id"></input></form></th>
-			<th ng-show="isViznetChecked || isBPM_NCCMChecked || isM6Checked" ><form class="form-inline"><input class="form-control" placeholder="M6/Viznet Service ID" ng-model="search.m6viznet_service_id"></input></form></th>
-			<th ng-show="isM6Checked"><form class="form-inline"><input class="form-control" placeholder="M6 COPF ID" ng-model="search.m6_copf_id"></input></form></th>
-			<th ng-show="isBPM_NCCMChecked" ><form class="form-inline"><input class="form-control" placeholder="NCCM ID" ng-model="search.nccm_id"></input></form></th>
-			<th ng-show="isBPM_IORChecked"><form class="form-inline"><input class="form-control" placeholder="IOR ID" ng-model="search.ior_id"></input></form></th>
-			<th ng-show="isCrammerChecked || isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Customer Name" ng-model="search.customer_name"></input></form></th>
-			<th ng-show="isCrammerChecked || isViznetChecked || isM6Checked" ><form class="form-inline"><input class="form-control" placeholder="Service Type" ng-model="search.service_type"></input></form></th>
-			<th ng-show="isViznetChecked"><form class="form-inline"><input class="form-control" placeholder="bandwidth" ng-model="search.bandwidth"></input></form></th>
+			<th ng-show="isCrammerChecked"><form class="form-inline"><input class="form-control" placeholder="Tiger ID" ng-model="search.tiger_id">Tiger ID</input></form></th>
+			<th ng-show="isViznetChecked"><form class="form-inline"><input class="form-control" placeholder="Viznet ID" ng-model="search.viznet_id">Viznet ID</input></form></th>
+			<th ng-show="isViznetChecked || isBPM_NCCMChecked || isM6Checked" ><form class="form-inline"><input class="form-control" placeholder="M6 / Viznet Service ID" ng-model="search.m6viznet_service_id">M6/Viznet Service ID</input></form></th>
+			<th ng-show="isM6Checked"><form class="form-inline"><input class="form-control" placeholder="M6 COPF ID" ng-model="search.m6_copf_id">M6 COPF ID</input></form></th>
+			<th ng-show="isBPM_NCCMChecked" ><form class="form-inline"><input class="form-control" placeholder="NCCM ID" ng-model="search.nccm_id">NCCM ID</input></form></th>
+			<th ng-show="isBPM_IORChecked"><form class="form-inline"><input class="form-control" placeholder="IOR ID" ng-model="search.ior_id">IOR ID</input></form></th>
+			<th ng-show="isCrammerChecked || isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Customer Name" ng-model="search.customer_name">Customer Name</input></form></th>
+			<th ng-show="isCrammerChecked || isViznetChecked || isM6Checked" ><form class="form-inline"><input class="form-control" placeholder="Service Type" ng-model="search.service_type">Service Type</input></form></th>
+			<th ng-show="isViznetChecked"><form class="form-inline"><input class="form-control" placeholder="bandwidth" ng-model="search.bandwidth">Bandwidth</input></form></th>
 			
 
-			<th ng-show="isCrammerChecked || isViznetChecked || isBPM_IORChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="CRFS date" ng-model="search.crfs_date"></input></form></th>
+			<th ng-show="isCrammerChecked || isViznetChecked || isBPM_IORChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="CRFS date" ng-model="search.crfs_date">CRFS Date</input></form></th>
 
-			<th ng-show="isCrammerChecked"><form class="form-inline"><input class="form-control" placeholder="Provisioner Name" ng-model="search.provisioner_name"></input></form></th>    
+			<th ng-show="isCrammerChecked"><form class="form-inline"><input class="form-control" placeholder="Provisioner Name" ng-model="search.provisioner_name">Provisioner Name</input></form></th>    
 			
-			<th ng-show="isCrammerChecked || isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Circuit Action Type" ng-model="search.circuit_action_type"></input></form></th>
+			<th ng-show="isCrammerChecked || isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Circuit Action Type" ng-model="search.circuit_action_type">Circuit Action Type</input></form></th>
 			
 
-			<th ng-show="isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Site A" ng-model="search.site_A"></input></form></th>
+			<th ng-show="isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Site A" ng-model="search.site_A">Site A</input></form></th>
 			
 			
-			<th ng-show="isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Site B" ng-model="search.site_B"></input></form></th>
+			<th ng-show="isViznetChecked || isM6Checked"><form class="form-inline"><input class="form-control" placeholder="Site B" ng-model="search.site_B">Site B</input></form></th>
 
 
-			<th ng-show="isM6Checked"><form class="form-inline"><input class="form-control" placeholder="M6 Work Queue" ng-model="search.m6_work_queue"></input></form></th>
+			<th ng-show="isM6Checked"><form class="form-inline"><input class="form-control" placeholder="M6 Work Queue" ng-model="search.m6_work_queue">M6 Work Queue</input></form></th>
 
 
-			<th ng-show="isBPM_IORChecked"><form class="form-inline"><input class="form-control" placeholder="IOR Order Type" ng-model="search.ior_order_type"></input></form></th>
+			<th ng-show="isBPM_IORChecked"><form class="form-inline"><input class="form-control" placeholder="IOR Order Type" ng-model="search.ior_order_type">IOR Order Type</input></form></th>
 
 			<th>
 				<!--form class="form-inline"><input class="form-control" placeholder="CIRCUIT_ISSUE_DATE" ng-model="timeRange.CIRCUIT_ISSUE_DATE"></input></form-->
@@ -67,29 +67,33 @@
 						<span class="glyphicon glyphicon-th"></span>
 					</div>
 				</div>
+				Order Issued Date
 			</th>
 
 
-			<th><form class="form-inline"><input class="form-control" placeholder="Dependency Owner" ng-model="search.dependency_owner"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Dependency Owner" ng-model="search.dependency_owner">Dependency Owner</input></form></th>
 			<th>
-				<form class="form-inline"><input class="form-control" placeholder="Dependency Found Date" ng-model="search.startDepDate"></input></form>
+				<form class="form-inline"><input class="form-control" placeholder="Dependency Found Date" ng-model="search.startDepDate">Dependency Found Date</input></form>
 			</th>
 			<th>
-				<form class="form-inline"><input class="form-control" placeholder="Dependency Cleared Date" ng-model="search.endDepDate"></input></form>
+				<form class="form-inline"><input class="form-control" placeholder="Dependency Cleared Date" ng-model="search.endDepDate">Dependency End Date</input></form>
 			</th>
-			<th><form class="form-inline"><input class="form-control" placeholder="Remarks" ng-model="search.remarks"></input></form></th>
-			<th><form class="form-inline"><input class="form-control" placeholder="Assigned" ng-model="search.assigned"></input></form></th>
-			<th><form class="form-inline"><input class="form-control" placeholder="Order Status" ng-model="search.order_status"></input></form></th>
-			<th><form class="form-inline"><input class="form-control" placeholder="VP Approval" ng-model="search.vp_approval"></input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Remarks" ng-model="search.remarks">Remarks</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Assigned" ng-model="search.assigned">Assigned</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Order Status" ng-model="search.order_status">Order Status</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="VP Approval" ng-model="search.vp_approval">VP Approval</input></form></th>
 			<th>
-				<form class="form-inline"><input class="form-control" placeholder="Configuration completion Date" ng-model="search.configCompDate"></input></form>
+				<form class="form-inline"><input class="form-control" placeholder="Configuration completion Date" ng-model="search.configCompDate">Config Completion Date</input></form>
 			</th>
 
 			<th>
-				<form class="form-inline"><input class="form-control" placeholder="Test completion Date" ng-model="search.testCompDate"></input></form>
+				<form class="form-inline"><input class="form-control" placeholder="Test completion Date" ng-model="search.testCompDate">Test Completion Date</input></form>
 			</th>
-			<th><form class="form-inline"><input class="form-control" placeholder="Hanging Deletion" ng-model="search.hanging_deletion"></input></form></th>
-
+			<th><form class="form-inline"><input class="form-control" placeholder="Hanging Deletion" ng-model="search.hanging_deletion">Hanging Deletion</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Order Type" ng-model="search.order_type" >Order Type</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Enterprise/Non Enterprise" ng-model="search.ent">Enterprise/Non Enterprise</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="TAT(in days)" ng-model="search.TAT" >TAT(in days)</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="TAT Status" ng-model="search.TAT_status">TAT Status</input></form></th>
 
 
 			<!--th><form class="form-inline"><input class="form-control" placeholder="Pending With" ng-model="search.pending_with"></input></form></th-->
@@ -100,13 +104,13 @@
 		<tr ng-repeat='todo in filtered = (todos | filter: search | todoFilter:startDate:endDate)'>
 			<td><input type="checkbox" ng-checked="todo.isCompleted" ng-click="onCompletedClick(todo)"/></td>
 			<td ng-show="isCrammerChecked || isViznetChecked || isBPM_IORChecked || isM6Checked">
-				<span class="todos__task" 
+				<span class="todos__task" ng-init="onGenReport(todo)"
 					ng-class="{'todos__task--completed':todo.isCompleted}">
 					{{todo.SrNo}}
 				</span>
 			</td>
 			<td ng-show="isCrammerChecked">
-				<span class="todos__task" 
+				<span class="todos__task"
 					ng-class="{'todos__task--completed':todo.isCompleted}">
 					{{todo.nims_id}}
 				</span>
@@ -227,7 +231,7 @@
 			</td>
 
 			<td>
-				<span class="todos__task" 
+				<span class="todos__task" ng-model="date"
 					ng-class="{'todos__task--completed':todo.isCompleted}">
 					{{todo.order_issued_date}}
 				</span>
@@ -254,7 +258,7 @@
 			</td>
 
 			<td>
-				<span ng-if="!todo.isEditing" class="todos__task" 
+				<span ng-if="!todo.isEditing" class="todos__task" ng-model="date"
 					ng-class="{'todos__task--completed':todo.isCompleted}">
 					{{todo.startDepDate}}
 				</span>
@@ -269,7 +273,7 @@
 			</td>
 
 			<td>
-				<span ng-if="!todo.isEditing" class="todos__task" 
+				<span ng-if="!todo.isEditing" class="todos__task" ng-model="date" 
 					ng-class="{'todos__task--completed':todo.isCompleted}">
 					{{todo.endDepDate}}
 				</span>
@@ -343,13 +347,13 @@
 			</td>
 
 			<td>
-				<span ng-if="!todo.isEditing" class="todos__task" 
+				<span ng-if="!todo.isEditing" class="todos__task" ng-model="date"
 					ng-class="{'todos__task--completed':todo.isCompleted}">
 					{{todo.configCompDate}}
 				</span>
 				<form ng-submit="updateTask(todo)">
 					<div class="input-group date"  ng-if="todo.isEditing" data-provide="datepicker">
-						<input type="text" class="form-control todos_update-input" ng-value="todo.configCompDate" ng-model="todo.updatedTask8">
+						<input type="text" class="form-control todos_update-input" ng-value="todo.configCompDate" ng-model="todo.updatedTask8" >
 						<div class="input-group-addon">
 							<span class="glyphicon glyphicon-th"></span>
 						</div>
@@ -383,6 +387,39 @@
 				</form>
 			</td>
 			<td>
+				<span 
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.order_type}}
+				</span>
+		
+
+			</td>
+			<td>
+				<span 
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.ent}}
+				</span>
+		
+
+			</td>
+			<td>
+				<span ng-if="(toTimeStamp(todo.configCompDate) !== undefined)||(toTimeStamp(todo.order_issued_date) !== undefined)"
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.TAT}}
+				</span>
+			</td>
+			<td>
+				<span 
+					class="todos__task" 
+					ng-class="{'todos__task--completed':todo.isCompleted}">
+					{{todo.TAT_status}}
+				</span>
+			</td>
+
+			<td>
 				<button ng-if="!todo.isEditing" class="btn btn-info" ng-click="onEditClick(todo)">Edit</button>
 				<button ng-if="!todo.isEditing" class="btn btn-danger" ng-click="deleteTask(todo)">Delete</button>
 
@@ -398,7 +435,7 @@
 <script type="text/javascript">
    	//$('#someButtton').on('click', function(){ CSV.begin("#printTable").download("HelloWorld.csv").go(); });
    	$( "#someButton" ).click(function() {
-  		CSV.begin("#printTable").download("HelloWorld.csv").go();
+  		CSV.begin("#printTable").download("dbExport.csv").go();
 	});
 
 

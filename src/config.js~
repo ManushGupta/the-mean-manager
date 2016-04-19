@@ -1,0 +1,40 @@
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import todoFactory from 'factories/todo-factory';
+import todosController from 'todos/todos';
+import todoFilter from 'factories/todo-filter';
+
+
+import sdnwnocsController from 'sdnwnocs/sdnwnocs';
+
+
+const app = angular.module('app', [uiRouter, todoFactory.name, todoFilter.name]);
+
+app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+        .state('wtd', {
+            url: '/wtd',
+            template: require('wtd/wtd.html'),
+            
+        })
+        .state('sdnwnoc', {
+            url: '/sdnwnoc',
+            template: require('sdnwnocs/sdnwnocs.html'),
+            controller: sdnwnocsController
+        })
+        .state('sdcnoc', {
+            url: '/sdcnoc',
+            template: require('todos/todos.html'),
+            controller: todosController
+        })
+        .state('main', {
+            url: '/',
+            template: require('about/about.html')
+        });
+
+    $locationProvider.html5Mode(true);
+});
+
+export default app;

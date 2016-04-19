@@ -1,0 +1,1 @@
+mongoimport --db todos --collection todos --type csv --file dataform.csv --headerline

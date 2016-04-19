@@ -1,0 +1,1100 @@
+
+<div class="container">
+	<h2><a ui-sref="main" class="nav-link">Main</a></h2>
+	<h2>The Mean Manager</h2>
+	<form ng-submit="createTask()">
+		<input class="form-control sdnwnocs__create-input" placeholder="what do i need to do?" ng-model="createTaskInput"/>
+		<button class="btn btn-success sdnwnocs__create-button">Create Task</button>
+	</form>
+
+	<span style="float: left; padding: 20px; margin-left: 3%;"> BPM NCCM <input style="float: left" type="checkbox" ng-click="onBPM_NCCMClick()" checked/></span>
+	<span style="float: left; padding: 20px; margin-left: 3%;"> BPM EOR <input style="float: left" type="checkbox" ng-click="onBPM_EORClick()" checked/></span>
+	<!--span style="float: left; padding: 20px"><button style="float: left" type="checkbox"> Generate Report</button></span-->
+	
+	<span style="position : fixed; margin-top: -10px">Count {{filtered.length}} <button style="float: left" id="someButton">Export</button></span>
+	
+
+	<div id="printTable">
+	<table class="table table-striped">
+		<tr>
+			<th>Completed?</th>
+			<th ng-show="isBPM_NCCMChecked" ><form class="form-inline"><input class="form-control" placeholder="NCCM ID" ng-model="search.nccm_id">NCCM ID</input></form></th>
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="EOR ID" ng-model="search.eor_id">EOR ID</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Process Type" ng-model="search.process_type">Process Type</input></form></th>
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="EOR Type" ng-model="search.eor_type">EOR Type</input></form></th>
+
+			<th ng-show="isBPM_NCCMChecked">
+				<!--form class="form-inline"><input class="form-control" placeholder="CIRCUIT_ISSUE_DATE" ng-model="timeRange.CIRCUIT_ISSUE_DATE"></input></form-->
+				<div class="input-group date" data-provide="datepicker">
+					<input type="text" class="form-control" id="startDate" ng-model="startDate">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-th"></span>
+					</div>
+				</div>
+				<div class="input-group date" data-provide="datepicker">
+					<input type="text" class="form-control" id="endDate" ng-model="endDate">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-th"></span>
+					</div>
+				</div>
+				Order Issued Date
+			</th>
+			<th ng-show="isBPM_NCCMChecked" ><form class="form-inline"><input class="form-control" placeholder="Plan Released By" ng-model="search.plan_released_by">Plan Released By</input></form></th>
+			
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="NCCM Details" ng-model="search.nccm_details">NCCM Details</input></form></th>
+			
+			
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="NCCM Type" ng-model="search.nccm_type">NCCM Type</input></form></th>
+			
+			
+			<th><form class="form-inline"><input class="form-control" placeholder="City" ng-model="search.city">City</input></form></th>
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Node Name" ng-model="search.node_name">Node Name</input></form></th>
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Node IP" ng-model="search.node_ip">Node IP</input></form></th>
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Node Type" ng-model="search.node_type">Node Type</input></form></th>
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Node Bandwidth" ng-model="search.node_bw">Node Bandwidth</input></form></th>
+			
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="NW integration Date" ng-model="search.nw_integration">NW Integration Date</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="NW integration By" ng-model="search.nw_integration_by">NW Integration By</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="EMS Upload" ng-model="search.ems_upload">EMS Upload</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="EMS Upload By" ng-model="search.ems_upload_by">EMS Upload By</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="Cramer Upload Date" ng-model="search.cramer_upload">Cramer Upload Date</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="Cramer Upload By" ng-model="search.cramer_upload_by">Cramer Upload By</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="NetP Upload Date" ng-model="search.netp_upload">NetP Upload Date</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked && isAddType"><form class="form-inline"><input class="form-control" placeholder="NetP Upload By" ng-model="search.netp_upload_by">NetP Upload By</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && !isAddType"><form class="form-inline"><input class="form-control" placeholder="EOR Released Date" ng-model="search.eor_released">Eor Released Date</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && !isAddType"><form class="form-inline"><input class="form-control" placeholder="EMS Deletion" ng-model="search.ems_deletion">EMS Deletion Date</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && !isAddType"><form class="form-inline"><input class="form-control" placeholder="EMS Deleted By" ng-model="search.ems_deleted_by">EMS Deleted By</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && !isAddType"><form class="form-inline"><input class="form-control" placeholder="NetP Deletion Date" ng-model="search.netp_deletion">NetP Deletion Date</input></form></th>
+
+			<th ng-show="isBPM_EORChecked && !isAddType"><form class="form-inline"><input class="form-control" placeholder="NetP Deletion By" ng-model="search.netp_deletion_by">NetP Deletion By</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Dependency" ng-model="search.dependency">Dependency</input></form></th>
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Dependency Found Date" ng-model="search.dependency_found">Dependency Found Date</input></form></th>
+
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="Dependency Cleared Date" ng-model="search.dependency_cleared">Dependency Cleared Date</input></form></th>
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="NSA Prepared Date" ng-model="search.nsa_prepared">NSA Prepared Date</input></form>
+			</th>
+
+
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="NSA Prepared By" ng-model="search.nsa_prepared_by_1">NSA Prepared By</input></form></th>
+
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="NSA Prepared By(If two people)" ng-model="search.nsa_prepared_by_2">NSA Prepared By(if 2)</input></form></th>
+			
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="No of VC-12" ng-model="search.no_of_vc_12">No of VC-12</input></form></th>
+
+
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="No of VC-3" ng-model="search.no_of_vc_3">No of VC-3</input></form></th>
+			
+
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="No of VC-4" ng-model="search.no_of_vc_4">No of VC-4</input></form></th>
+
+
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="NSA Plan Revision" ng-model="search.nsa_plan_revision">NSA Plan Revision</input></form></th>
+
+			
+			<th ng-show="isBPM_NCCMChecked"><form class="form-inline"><input class="form-control" placeholder="NSA Plan Revision Reason" ng-model="search.nsa_plan_revision_reason">NSA Plan Revision Reason</input></form></th>
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="NCCM Schedule Date" ng-model="search.nccm_schedule">NCCM Schedule Date</input></form>
+			</th>
+			
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="NCCM Execution Date" ng-model="search.nccm_execution">NCCM Execution Date</input></form>
+			</th>
+			
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="Executed By" ng-model="search.executed_by">Executed By</input></form>
+			</th>
+
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="Execution Plan Revision" ng-model="search.execution_plan_revision">Execution Plan Revision</input></form>
+			</th>
+
+			
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="Execution Plan Revision Reason" ng-model="search.execution_plan_revision_reason">Execution Plan Revision Reason</input></form>
+			</th>
+
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="Hanging Deletion" ng-model="search.hanging_deletion">Hanging Deletion</input></form>
+			</th>
+			
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="Hanging Deleted By" ng-model="search.hanging_deleted_by">Hanging Deleted By</input></form>
+			</th>
+
+
+			<th>
+				<form class="form-inline"><input class="form-control" placeholder="Remarks" ng-model="search.remarks">Remarks</input></form>
+			</th>
+
+
+			<th ng-show="isBPM_EORChecked"><form class="form-inline"><input class="form-control" placeholder="EOR Status" ng-model="search.eor_status">EOR Status</input></form></th>
+
+			<th ng-show="isBPM_NCCMChecked">
+				<form class="form-inline"><input class="form-control" placeholder="NCCM Status" ng-model="search.nccm_status">NCCM Status</input></form>
+			</th>
+			
+			<th>
+				<form class="form-inline"><input class="form-control" placeholder="TAT with dependency" ng-model="search.TAT_w_dep">TAT(in days) With dependency</input></form>
+			</th>
+
+			<th>
+				<form class="form-inline"><input class="form-control" placeholder="TAT Status" ng-model="search.TAT_status_w_dep">TAT Status with dependency</input></form>
+			</th>
+
+			<th>
+				<form class="form-inline"><input class="form-control" placeholder="TAT without dependency" ng-model="search.TAT_wo_dep">TAT(in days) without dependency</input></form>
+			</th>
+
+			<th>
+				<form class="form-inline"><input class="form-control" placeholder="TAT Status without dependency" ng-model="search.TAT_status_wo_dep">TAT Status without Dependency</input></form>
+			</th>
+
+			
+			<th>Actions</th>
+		</tr>
+		
+
+		<tr ng-repeat='sdnwnoc in filtered = (sdnwnocs | filter: search | sdnwnocFilter:startDate:endDate)'>
+			<td><input type="checkbox" ng-checked="sdnwnoc.isCompleted" ng-click="onCompletedClick(sdnwnoc)"/></td>
+			
+			<td ng-show="isBPM_NCCMChecked">
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nccm_id}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.nccm_id" ng-model="sdnwnoc.updatedTask21">
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.eor_id}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.eor_id" ng-model="sdnwnoc.updatedTask22">
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.eor_type}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.eor_type" ng-model="sdnwnoc.updatedTask23">
+						<option>ADD</option>
+						<option>DEL</option>
+						
+					</select> 	
+				</form>
+			</td>
+
+
+			<td>
+				<span class="sdnwnocs__task" ng-init="onGenReport(sdnwnoc)" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.process_type}}
+				</span>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.order_issued_date}}
+				</span>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.plan_released_by}}
+				</span>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nccm_details}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nccm_details" ng-model="sdnwnoc.updatedTask1">
+						<option>Mux Upgradation</option>
+						<option>Ring Upgradation</option>
+						<option>Mux Replacement</option>
+						<option>Mux Shifting</option>
+						<option>Ring Splitting</option>
+						<option>Ring Parenting Change</option>
+						<option>Dechocking</option>
+						<option>Lambda Migration</option>
+						<option>Re-grooming</option>
+						<option>Circuit Shifting</option>
+						<option>Circuit Re-routing</option>
+						<option>Mux Insertion/Removal</option>
+						<option>Card Replacement</option>
+						<option>Card Shifting</option>
+						<option>Port Shifting</option>
+						<option>MSP to SNCP conversion</option>
+						<option>SNCP to MSP conversion</option>
+						<option>Linear to MSP Conversion</option>
+						<option>MSP to Linear Conversion</option>
+						<option>Backbone Upgradation</option>
+						<option>Card Reconfiguration</option>
+						<option>Bandwidth Optimization</option>
+						<option>AU4 structuring/Passthrough</option>
+						<option>Other</option>
+					</select> 	
+				</form>
+			</td>
+
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nccm_type}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nccm_type" ng-model="sdnwnoc.updatedTask2">
+						<option>SA</option>
+						<option>NSA</option>
+						<option>NSA + SA</option>
+						<option>18 Days SA</option>
+					</select> 	
+				</form>
+			</td>
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.city}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.city" ng-model="sdnwnoc.updatedTask3">
+						<option>Adoni</option>
+						<option>Agra</option>
+						<option>Ahmedabad</option>
+						<option>Ahmednagar</option>
+						<option>Ajmer</option>
+						<option>Akola</option>
+						<option>Allahabad</option>
+						<option>Alleppy</option>
+						<option>Alwar</option>
+						<option>Ambala</option>
+						<option>Amritsar</option>
+						<option>Anand</option>
+						<option>Ankleshwar</option>
+						<option>Asansol</option>
+						<option>Aurangabad</option>
+						<option>Bangalore</option>
+						<option>Bangaon</option>
+						<option>Bareilly</option>
+						<option>Behrampur</option>
+						<option>Bhatinda</option>
+						<option>Bhopal</option>
+						<option>Bhubaneshwar</option>
+						<option>Calicut</option>
+						<option>Chandigarh</option>
+						<option>Chennai</option>
+						<option>Cochin</option>
+						<option>Coimbatore</option>
+						<option>Cuttack</option>
+						<option>Dehradun</option>
+						<option>Ernakulam</option>
+						<option>Faridabad</option>
+						<option>Gandhinagar</option>
+						<option>Ghaziabad</option>
+						<option>Gurgaon</option>
+						<option>Guwahati</option>
+						<option>Gwalior</option>
+						<option>Hubli</option>
+						<option>Hyderabad</option>
+						<option>Indore</option>
+						<option>Jaipur</option>
+						<option>Jalandhar</option>
+						<option>Jammu</option>
+						<option>Jamshedpur</option>
+						<option>Kanpur</option>
+						<option>Karnal</option>
+						<option>Kharagpur</option>
+						<option>Kolhapur</option>
+						<option>Kolkata</option>
+						<option>Kollam</option>
+						<option>Kottayam</option>
+						<option>Lucknow</option>
+						<option>Ludhiana</option>
+						<option>Meerut</option>
+						<option>Mohali</option>
+						<option>Mumbai</option>
+						<option>Mysore</option>
+						<option>Nagpur</option>
+						<option>Nashik</option>
+						<option>Nellore</option>
+						<option>New Delhi</option>
+						<option>Noida</option>
+						<option>Panjim</option>
+						<option>Patiala</option>
+						<option>Patna</option>
+						<option>Pune</option>
+						<option>Rajkot</option>
+						<option>Roorkee</option>
+						<option>Salem</option>
+						<option>Surat</option>
+						<option>Trivandrum</option>
+						<option>Udaipur</option>
+						<option>Vadodara</option>
+						<option>Varanasi</option>
+						<option>Vellore</option>
+						<option>Vijayawada</option>
+						<option>Vishakhapatnam</option>
+					</select> 	
+				</form>
+			</td>
+			
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.node_name}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.node_name" ng-model="sdnwnoc.updatedTask24">
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.node_ip}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.node_ip" ng-model="sdnwnoc.updatedTask25">
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.node_type}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.node_type" ng-model="sdnwnoc.updatedTask26">
+						<option>TJ100CP</option>
+						<option>TJ100CPE</option>
+						<option>TJ1210</option>
+						<option>TJ1100</option>
+						<option>TJ1200</option>
+						<option>TJ100MC1_R1</option>
+						<option>TJ100MC1_R2</option>
+						<option>TJ100MC1_R4/R5</option>
+						<option>TJ1260/TJ100CPE4</option>
+						<option>TJ100MC4L</option>
+						<option>TJ100MC16</option>
+						<option>TJMC1270</option>
+						<option>TJ1500R2(XCC02)</option>
+						<option>TJ1500R3(XCC03)</option>
+						<option>TJ100ME04</option>
+						<option>TJ100ME15</option>
+						<option>TJ1600</option>
+						<option>TJ1420-XA10G</option>
+						<option>TJ1420-XA20G</option>
+						<option>TJ1420-XA60G</option>
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.node_bw}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.node_bw" ng-model="sdnwnoc.updatedTask27">
+						<option>STM-1</option>
+						<option>STM-4</option>
+						<option>STM-16</option>
+						<option>STM-64</option>
+						<option>1G</option>
+						<option>10G</option>
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nw_integration}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nw_integration" ng-model="sdnwnoc.updatedTask28">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nw_integration_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nw_integration_by" ng-model="sdnwnoc.updatedTask29">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+			
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.ems_upload}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.ems_upload" ng-model="sdnwnoc.updatedTask30">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.ems_upload_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.ems_upload_by" ng-model="sdnwnoc.updatedTask31">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.cramer_upload}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.cramer_upload" ng-model="sdnwnoc.updatedTask32">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.cramer_upload_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.cramer_upload_by" ng-model="sdnwnoc.updatedTask33">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.netp_upload}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.netp_upload" ng-model="sdnwnoc.updatedTask34">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && isAddType">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.netp_upload_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.netp_upload_by" ng-model="sdnwnoc.updatedTask35">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && !isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.eor_released}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.eor_released" ng-model="sdnwnoc.updatedTask36">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+			
+			<td ng-show="isBPM_EORChecked && !isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.ems_deletion}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.ems_deletion" ng-model="sdnwnoc.updatedTask37">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && !isAddType">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.ems_deletion_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.ems_deletion_by" ng-model="sdnwnoc.updatedTask38">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && !isAddType">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.netp_deletion}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.netp_deletion" ng-model="sdnwnoc.updatedTask39">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked && !isAddType">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.netp_deletion_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.netp_deletion_by" ng-model="sdnwnoc.updatedTask40">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+			
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.Dependency}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.dependency" ng-model="sdnwnoc.updatedTask41">
+						<option>MAN-FO</option>
+						<option>GSPI</option>
+						<option>NOC-DCN</option>
+						<option>FNOC</option>
+						<option>NTAC</option>
+						<option>ONNET TSE/PM</option>
+						<option>BOP</option>
+						<option>SDNW</option>
+						<option>ACE</option>
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.dependency_found}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.dependency_found" ng-model="sdnwnoc.updatedTask42">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.dependency_cleared}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.dependency_cleared" ng-model="sdnwnoc.updatedTask43">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+
+
+
+				
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nsa_prepared}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nsa_prepared" ng-model="sdnwnoc.updatedTask4">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+			
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nsa_prepared_by_1}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nsa_prepared_by_1" ng-model="sdnwnoc.updatedTask5">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nsa_prepared_by_2}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nsa_prepared_by_2" ng-model="sdnwnoc.updatedTask6">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.no_of_vc_12}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" id="listjs" class="form-control sdnwnocs_update-input" ng-options="n for n in Range(0,1000)" ng-value="sdnwnoc.no_of_vc_12" ng-model="sdnwnoc.updatedTask7">					
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.no_of_vc_3}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" id="listjs" class="form-control sdnwnocs_update-input" ng-options="n for n in Range(0,1000)" ng-value="sdnwnoc.no_of_vc_3" ng-model="sdnwnoc.updatedTask8">					
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.no_of_vc_4}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" id="listjs" class="form-control sdnwnocs_update-input" ng-options="n for n in Range(0,1000)" ng-value="sdnwnoc.no_of_vc_4" ng-model="sdnwnoc.updatedTask9">					
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nsa_plan_revision}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" 
+					class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nsa_plan_revision" ng-model="sdnwnoc.updatedTask10">
+						<option>Yes</option>
+						<option>No</option>
+					</select> 	
+				</form>
+			</td>
+			
+			<td>
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nsa_plan_revision_reason}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.nsa_plan_revision_reason" ng-model="sdnwnoc.updatedTask11">
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nccm_schedule}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nccm_schedule" ng-model="sdnwnoc.updatedTask12">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nccm_execution}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nccm_execution" ng-model="sdnwnoc.updatedTask13">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.executed_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.executed_by" ng-model="sdnwnoc.updatedTask14">
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.execution_plan_revision}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" 
+					class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.execution_plan_revision" ng-model="sdnwnoc.updatedTask15">
+						<option>Yes</option>
+						<option>No</option>
+					</select> 	
+				</form>
+			</td>
+
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.execution_plan_revision_reason}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.execution_plan_revision_reason" ng-model="sdnwnoc.updatedTask16">
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" class="sdnwnocs__task" ng-model="date"
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.hanging_deletion}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<div class="input-group date" ng-if="sdnwnoc.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.hanging_deletion" ng-model="sdnwnoc.updatedTask17">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.hanging_deleted_by}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.hanging_deleted_by" ng-model="sdnwnoc.updatedTask18">
+
+						<option>Arun</option>
+						<option>Ankita</option>
+						<option>Gagan</option>
+						<option>Pranjal</option>
+						<option>Yogesh</option>
+						<option>Kimaya</option>
+						<option>Priti</option>
+						<option>Pushkar</option>
+						<option>Jefferson</option>
+						<option>Gaurav</option>
+						
+						
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing"
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.remarks}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<input ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs__update-input" ng-value="sdnwnoc.remarks" ng-model="sdnwnoc.updatedTask19">
+				</form>
+			</td>
+
+			<td ng-show="isBPM_EORChecked">
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.eor_status}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.eor_status" ng-model="sdnwnoc.updatedTask44">
+						<option>Completed</option>
+						<option>Ceased</option>
+						<option>Pending</option>
+						<option>Cancelled</option>
+					</select> 	
+				</form>
+			</td>
+
+			<td>
+				<span ng-if="!sdnwnoc.isEditing" 
+					class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.nccm_status}}
+				</span>
+				<form ng-submit="updateTask(sdnwnoc)">
+					<select ng-if="sdnwnoc.isEditing" 
+					class="form-control sdnwnocs_update-input" ng-value="sdnwnoc.nccm_status" ng-model="sdnwnoc.updatedTask20">
+						<option>Completed</option>
+						<option>Ceased</option>
+						<option>Pending</option>
+					</select> 	
+				</form>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.TAT_w_dep}}
+				</span>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.TAT_status_w_dep}}
+				</span>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.TAT_wo_dep}}
+				</span>
+			</td>
+
+			<td ng-show="isBPM_NCCMChecked">
+				<span class="sdnwnocs__task" 
+					ng-class="{'sdnwnocs__task--completed':sdnwnoc.isCompleted}">
+					{{sdnwnoc.TAT_status_wo_dep}}
+				</span>
+			</td>
+
+
+			
+			<td>
+				<button ng-if="!sdnwnoc.isEditing" class="btn btn-info" ng-click="onEditClick(sdnwnoc)">Edit</button>
+				<button ng-if="!sdnwnoc.isEditing" class="btn btn-danger" ng-click="deleteTask(sdnwnoc)">Delete</button>
+
+				<button ng-if="sdnwnoc.isEditing" class="btn btn-primary" ng-click="updateTask(sdnwnoc)">Save</button>
+				<button ng-if="sdnwnoc.isEditing" class="btn btn-default" ng-click="onCancelClick(sdnwnoc)">Cancel</button>
+			</td>
+		</tr>
+	</table>
+	</div>
+
+
+</div>
+<script type="text/javascript">
+   	//$('#someButtton').on('click', function(){ CSV.begin("#printTable").download("HelloWorld.csv").go(); });
+   	$( "#someButton" ).click(function() {
+  		CSV.begin("#printTable").download("dbExport.csv").go();
+	});
+
+
+
+</script>

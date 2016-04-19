@@ -1,0 +1,300 @@
+ior_id,Order Scenario Type,ior_order_type,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,order_issued_date
+EOR_231596,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,CHENNAI,,,,,,,08-01-2015 12:15,No,08-01-2015 00:00,pls insert S16.1 SFP in given mux.,
+EOR_302156,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,aganpule,Provisioning-Network,5,MUMBAI,,,,,,,07-12-2015 10:57,No,07-12-2015 00:00,SFP addition,07-12-2015 11:43
+EOR_302160,PROVISION,EORTX,Commissioned,,,,,hemant.mhaisne,GSPI,,MUMBAI,,,,,,,07-12-2015 11:01,No,07-12-2015 00:00,EOR for ADVA card addition in BKC for BKC-GPX under Man upgrade Ph-1 FY 15-16,
+EOR_302167,PROVISION,EORTX,Commissioned,,,,,hemant.mhaisne,GSPI,,MUMBAI,,,,,,,07-12-2015 11:03,No,07-12-2015 00:00,EOR for ADVA card addition in GPX for BKC-GPX under Man upgrade Ph-1 FY 15-16,
+EOR_302169,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,MUMBAI,,,,,,,07-12-2015 11:07,No,07-12-2015 00:00,CArd + SFP addition,
+EOR_302170,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,aganpule,Provisioning-Network,5,MUMBAI,,,,,,,07-12-2015 11:14,No,07-12-2015 00:00,SFP Deletion,07-12-2015 11:44
+EOR_302178,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,AzanSidd,Provisioning-TxInventory,5,NEW DELHI,,,,,,,07-12-2015 11:46,No,08-12-2015 00:00,Addition of 2*STM4 SFP in 1-7-11 and 1-8-16 //DHL_TJ1600C_05##172.23.99.225,22-12-2015 15:30
+EOR_302179,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,PUNE,,,,,,,07-12-2015 11:46,No,07-12-2015 00:00,Card addition,
+EOR_302193,PROVISION,EORTX,Commissioned,,,,,sperneti,GSPI,,HYDERABAD,,,,,,,07-12-2015 12:08,No,,OTR16_S3 addition for Man FY15-16 Ph-1 Project,
+EOR_302231,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,MUMBAI,,,,,,,07-12-2015 12:46,No,,Addition of  2XECI OTR16 for I7P3 & I8P3 of BELAPUR_XDM2K_1 ,
+EOR_302262,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,PUNE,,,,,,,07-12-2015 13:25,No,,Addition of 1XGigE electrical SFP at 1-11-19 of PUNE_WIPROS1600_01##172.23.18.217 ,
+EOR_302263,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,PUNE,,,,,,,07-12-2015 13:31,No,,Addition of 1XGigE optical SFP at 1-7-2 of PUNE_ILL_TJ1600_02(172.23.126.2),
+EOR_302267,PROVISION,EORTX,Commissioned,,,,,PGujarat,Provisioning-Network,,NEW DELHI,,,,,,,07-12-2015 13:42,No,,sfp addtion,
+EOR_302273,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,CHENNAI,,,,,,,07-12-2015 13:54,No,,SFP ADDITION,
+EOR_302282,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,NOIDA,,,,,,,07-12-2015 14:42,No,,FW: CLR Pending from 6th Nov<<< DEN NETWORKS LTD<<<1GM B/W::ILL-New::Sec-10 Noida //405148//091NOID0,
+EOR_302283,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,NOIDA,,,,,,,07-12-2015 14:44,No,,FW: CLR Pending from 6th Nov<<< DEN NETWORKS LTD<<<1GM B/W::ILL-New::Sec-10 Noida //405148//091NOID0,
+EOR_302314,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,AmeyBhan,TX-ENG,5,NEW DELHI,,,,,,,07-12-2015 15:43,No,,Deletion EOR for DLHI-BSHB-CD02,07-12-2015 19:52
+EOR_302316,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,MUMBAI,,,,,,,07-12-2015 15:46,No,,Addition of 2XGigE optical SFP at  1-8-12 &  1-9-3 of  MMB_LVSB_ILL_TJ1600_02(172.23.124.193),
+EOR_302317,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,AmeyBhan,TX-ENG,5,NEW DELHI,,,,,,,07-12-2015 15:46,No,,Addition EOR for DLHI-CD2,07-12-2015 19:41
+EOR_302319,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,MUMBAI,,,,,,,07-12-2015 15:52,No,,Addition of GigE electrical SFP at 1-8-9 of MUMB_IDBI_BEL_03##172.22.218.203,
+EOR_302318,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,07-12-2015 15:57,No,,SFP addition,
+EOR_302336,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,NEW DELHI,,,,,,,07-12-2015 16:08,No,,Addittion of TR04 card at 6th slot & SFP ayt 1-6-109  of NDLH_ILL_08 ,
+EOR_302358,PROVISION,EORTX,Commissioned,,,,,PGujarat,Provisioning-Network,,GURGAON,,,,,,,07-12-2015 17:07,No,,TP01 card addtion,
+EOR_302376,PROVISION,EORTX,Commissioned,,,,,sudhakar.kumar,GSPI,,GURGAON,,,,,,,07-12-2015 17:37,No,,LSX card addition in Delhi metro at UV Gurgaon under MAN ph-1,
+EOR_302380,PROVISION,EORTX,Commissioned,,,,,sudhakar.kumar,GSPI,,NOIDA,,,,,,,07-12-2015 17:51,No,,LSX card addition in Delhi metro at NOIDA NEPZ under MAN ph-1,
+EOR_302389,TERMINATE,EORIP,Terminated,,,,,RajSarav,GIMEC,,MUMBAI,,mu-mah-dls-mi04-rt01,,,,,07-12-2015 17:49,No,,,
+EOR_302417,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Bangalore,PrSahu,GSPI,5,BANGALORE,,,,,,,07-12-2015 19:11,No,07-12-2015 00:00,Ciena Card & XFP addition under NLD-12C Project,08-12-2015 12:53
+EOR_302440,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,COIMBATORE,,,,,,,07-12-2015 21:22,No,,SFP addition,
+EOR_302441,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,ERNAKULAM,,,,,,,07-12-2015 22:12,No,,SFP addition,
+EOR_302452,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chennai-ITMC,PGujarat,Provisioning-Network,5,CHENNAI,,,,,,,08-12-2015 09:36,No,,CARD & SFP ADDITION,08-12-2015 12:52
+EOR_302450,PROVISION,EORTX,COMMISSIONED,,,,,syelkar,GSPI,,MUMBAI,,,,,,,08-12-2015 09:41,No,09-12-2015 00:00,Subrack addition in BKC-DT-EXPRESS,
+EOR_302476,PROVISION,EORTX,COMMISSIONED,,,,,syelkar,GSPI,,MUMBAI,,,,,,,08-12-2015 10:27,No,09-12-2015 00:00,Card Creation in MAHAPE_MBP-DT-EXPRESS,
+EOR_302490,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,CHENNAI,,,,,,,08-12-2015 11:04,No,,SFP ADDITION,
+EOR_302491,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Bangalore,PrSahu,GSPI,5,BANGALORE,,,,,,,08-12-2015 11:11,No,08-12-2015 00:00,Ciena Card & XFP addition under NLD-12B Project,11-12-2015 19:25
+EOR_302500,PROVISION,EORTX,Commissioned,,,,,hemant.mhaisne,GSPI,,MUMBAI,,,,,,,08-12-2015 11:32,No,08-12-2015 00:00,EOR for Huawei sub rack and cards installation in LVSB under LVSB-MBP 100G Augumentation,
+EOR_302512,PROVISION,EORTX,Commissioned,,,,,hemant.mhaisne,GSPI,,MUMBAI,,,,,,,08-12-2015 11:37,No,08-12-2015 00:00,EOR for Huawei cards installation in MBP under LVSB-MBP 100G Augumentation,
+EOR_302520,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,MUMBAI,,,,,,,08-12-2015 12:02,No,08-12-2015 00:00,Card addtion,
+EOR_302531,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chennai-ITMC,amit.kumar1,Provisioning-TxInventory,5,CHENNAI,,,,,,,08-12-2015 12:03,No,09-12-2015 00:00, Express Network Private Limited / New-IDC-Cross Connect-1000 Mbps-Colo LM_ Gig Electrical / 406448,08-12-2015 12:54
+EOR_302533,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,dakshirs,Provisioning-TxInventory,5,ERNAKULAM,,,,,,,08-12-2015 12:06,Yes,,SFP ADDITION,10-12-2015 14:26
+EOR_302535,TERMINATE,EORTX,Terminating,EORTXTermination_EORTX_VerifyParameters,0,,Provisioning-TxInventory,phanibhu,GSPI,5,BANGALORE,,,,,,,08-12-2015 12:11,No,08-12-2015 00:00,CARD AND XFP ADDITION at  BGLR_KIADB_OSN7500_03 ,09-12-2015 13:00
+EOR_302544,CEASE,EORTX,Ceased,,,,,PGujarat,Provisioning-Network,,ERNAKULAM,,,,,,,08-12-2015 12:24,No,,SFP ADDITION,
+EOR_302549,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,syelkar,GSPI,5,MUMBAI,,,,,,,08-12-2015 12:42,No,,SFP Creation in MUMB-PRBD-CN5430-01,08-12-2015 17:46
+EOR_302574,CEASE,EORTX,Ceasing,Undo_EOR-TX_NewCardInstallation_BOP_Inventory,0,,Provisioning-TxInventory,DBaviska,Provisioning-TxInventory,5,KOLKATA,,,,,,,08-12-2015 13:35,No,,SFP,08-12-2015 13:48
+EOR_302565,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,ramkumar.v,Provisioning-TxInventory,5,BANGALORE,,,,,,,08-12-2015 13:37,No,,SFP addition,08-12-2015 15:07
+EOR_302572,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Coimbatore,dakshirs,Provisioning-TxInventory,5,COIMBATORE,,,,,,,08-12-2015 13:40,No,,CARD &SFP ADDITION,08-12-2015 16:42
+EOR_302575,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,NEW DELHI,,,,,,,08-12-2015 13:41,No,,Addition of TP01 card at 8th slot of NDLH_REGUSGLEMARK_01,
+EOR_302580,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Coimbatore,amit.kumar1,Provisioning-TxInventory,5,COIMBATORE,,,,,,,08-12-2015 13:53,No,09-12-2015 00:00,"RE: < Urgent Support due to Chennai Rain > - Wipro PILL Exceptional Approval - , Coimbatore - 200Mbp",08-12-2015 17:46
+EOR_302579,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,ramkumar.v,Provisioning-TxInventory,5,BANGALORE,,,,,,,08-12-2015 14:01,No,,SFP addition,08-12-2015 15:08
+EOR_302583,PROVISION,EORTX,Commissioned,,,,,PGujarat,Provisioning-Network,,ERNAKULAM,,,,,,,08-12-2015 14:15,No,,SFP ADDITION,
+EOR_302627,PROVISION,EORTX,Commissioned,,,,,DBaviska,Provisioning-TxInventory,,KOLKATA,,,,,,,08-12-2015 14:55,No,,SFP addition,
+EOR_302628,PROVISION,EORTX,Commissioned,,,,,sperneti,GSPI,,HYDERABAD,,,,,,,08-12-2015 15:05,No,,Ciena 5430 Augmentation for NLD12C Project,
+EOR_302637,PROVISION,EORTX,Commissioned,,,,,DeviVish,Provisioning-TxInventory,,MUMBAI,,,,,,,08-12-2015 15:18,No,,Deletion of 2xGig Optical SFP in 1-9-1 & 1-9-6 of MMB_BKC_ILL_TJ1600_01,
+EOR_302641,PROVISION,EORTX,Commissioned,,,,,DeviVish,Provisioning-TxInventory,,MUMBAI,,,,,,,08-12-2015 15:19,No,,Insert 2xGig Optical SFP in 1-3-18 & 1-3-19 of MMB3_TJ1600_4_CB,
+EOR_302643,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,GURGAON,,,,,,,08-12-2015 15:21,No,,RE: Serco BPO Pvt Ltd,GVPN
+EOR_302673,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,amit.kumar1,Provisioning-TxInventory,5,COIMBATORE,,,,,,,08-12-2015 15:48,No,09-12-2015 00:00,"RE: < Urgent Support due to Chennai Rain > - Wipro PILL Exceptional Approval - , Coimbatore - 200Mbp",08-12-2015 16:33
+EOR_302673,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_RaiseMRN,0,,NLD-Field-Ops-Coimbatore,amit.kumar1,Provisioning-TxInventory,5,COIMBATORE,,,,,,,08-12-2015 15:48,No,09-12-2015 00:00,"RE: < Urgent Support due to Chennai Rain > - Wipro PILL Exceptional Approval - , Coimbatore - 200Mbp",08-12-2015 16:33
+EOR_302688,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,GURGAON,,,,,,,08-12-2015 16:06,No,,Addition of TP01 Card at 8th slot of GRGN_WOODWARD_01##172.22.120.143,
+EOR_302689,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,COIMBATORE,,,,,,,08-12-2015 16:10,No,09-12-2015 00:00,RE: Urgent Support required due to Chennai Rain crises - Exceptional approval - CTS  - 44185333076 -,
+EOR_302715,PROVISION,EORTX,Processing,EORTX_CreateEORTx,0,,Provisioning-TxInventory,DBaviska,Provisioning-TxInventory,5,BANGALORE,,,,,,,08-12-2015 16:56,Yes,,SFP addition,21-12-2015 16:59
+EOR_302717,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chennai-ITMC,PGujarat,Provisioning-Network,5,CHENNAI,,,,,,,08-12-2015 17:01,No,,SFP ADDITION,08-12-2015 19:37
+EOR_302740,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,NOIDA,,,,,,,08-12-2015 17:26,No,,Addition of STM4 SFP at 1-4-18 & 1-7-18 of NDA_SEC9_TJ1600_01,
+EOR_302743,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,NOIDA,,,,,,,08-12-2015 17:28,No,,Addition of OTR4 at I10-16 & I11-16 OF NDA_XDM8,
+EOR_302746,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,NOIDA,,,,,,,08-12-2015 17:34,No,,Addition of 2.5G SFP at 1-3-5 & 1-16-5 of NDA_SEC62_OSN7500_02,
+EOR_302747,PROVISION,EORTX,COMMISSIONED,,,,,AzanSidd,Provisioning-TxInventory,,NOIDA,,,,,,,08-12-2015 17:37,No,,Addition of 2.5G SFP at 1-3-5 & 1-4-5 of NDA_SEC62_OSN7500_01,
+EOR_302739,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Pune,debabrata.b,GSPI,5,PUNE,,,,,,,08-12-2015 17:43,No,,NLD#12B- CIENA Card/Module installation,19-12-2015 11:27
+EOR_302749,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Pune,debabrata.b,GSPI,5,KOLHAPUR-MH,,,,,,,08-12-2015 17:49,No,,NLD#12B- CIENA Card/Module installation,18-12-2015 11:13
+EOR_302751,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,EDALABAD,,,,,,,08-12-2015 17:57,No,,NLD#12B- CIENA Card/Module installation,
+EOR_302753,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,KARVIR,,,,,,,08-12-2015 18:00,No,,"NLD12B ,Ciena card installation",
+EOR_302754,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,CHENNAI,,,,,,,08-12-2015 18:04,No,09-12-2015 00:00,RE: Temenos India Pvt. Ltd - 409972 / 4422182073 & 409974 / 4422183108 - PILL - Up-Gradation from 60,
+EOR_302757,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,NEW DELHI,,,,,,,08-12-2015 18:11,No,,RE: 393556/091DELH1143012953077/RGB Vistas Private Limited/1000 Mbps NDE at New Delhi - Project Upda,
+EOR_302770,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,MUMBAI,,,,,,,08-12-2015 18:50,No,,SFP addition,
+EOR_302773,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,aganpule,Provisioning-Network,5,MUMBAI,,,,,,,08-12-2015 18:55,No,08-12-2015 00:00,STM-1 SFP Addition,14-12-2015 15:48
+EOR_302775,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,08-12-2015 19:06,No,,SFP addition,
+EOR_302778,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,NEW DELHI,,,,,,,08-12-2015 19:11,No,,Deletion of OTR4 from I5-4 & I7-4 OF NDL_XDM56,
+EOR_302780,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Hyderabad,dakshirs,Provisioning-TxInventory,5,HYDERABAD,,,,,,,08-12-2015 19:21,No,,SFP ADDITION,09-12-2015 11:26
+EOR_302767,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,EDALABAD,,,,,,,08-12-2015 19:25,No,09-12-2015 00:00,Huawei 10G Card Deletion from CH-5/Edilabad under NLD-12B Project,
+EOR_302791,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,EDALABAD,,,,,,,08-12-2015 19:59,No,09-12-2015 00:00,Huawei 10G Card Deletion from CH-5/Edilabad under NLD-12B Project,
+EOR_302795,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Bhopal,RavBPati,TX-ENG,5,HUZUR,,,,,,,08-12-2015 20:05,No,,Card Addition In BHPL_ITMC_03,12-12-2015 12:35
+EOR_302799,PROVISION,EORTX,Commissioned,,,,,sadvitot,Provisioning-Network,,HUZUR,,,,,,,08-12-2015 20:16,No,08-12-2015 00:00,BHPL_ITMC_02,
+EOR_302807,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,syelkar,GSPI,5,MUMBAI,,,,,,,08-12-2015 23:50,No,,SFP Creation in MUMB-PRBD-CN5430-01,21-12-2015 11:17
+EOR_302809,PROVISION,EORIP,Commissioned,,,,,RajSarav,GIMEC,,CHENNAI,,cn-me01-rg02,,,,,09-12-2015 09:42,No,,Card insertion,
+EOR_302810,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Delhi,RajSarav,GIMEC,5,NEW DELHI,,dl-me01-icr01,,,,,09-12-2015 09:49,No,,Card insertion,04-01-2016 13:05
+EOR_302811,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Pune,RajSarav,GIMEC,5,PUNE,,pu-me01-icr01,,,,,09-12-2015 09:51,No,,Card insertion,04-01-2016 13:06
+EOR_302812,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Pune,RajSarav,GIMEC,5,PUNE,,pu-me01-icr02,,,,,09-12-2015 09:52,No,,Card insertion,04-01-2016 13:07
+EOR_302813,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Pune,RajSarav,GIMEC,5,PUNE,,pu-me01-icr01,,,,,09-12-2015 10:12,No,,Card insertion,04-01-2016 13:09
+EOR_302815,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Pune,RajSarav,GIMEC,5,PUNE,,pu-me01-icr02,,,,,09-12-2015 10:18,No,,Card insertion,05-01-2016 13:05
+EOR_302817,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Ahmedabad,RajSarav,GIMEC,5,AHMEDABAD,,ad-me01-icr01,,,,,09-12-2015 10:23,No,,Card insertion,04-01-2016 13:10
+EOR_302818,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Ahmedabad,RajSarav,GIMEC,5,AHMEDABAD,,ad-me01-icr02,,,,,09-12-2015 10:26,No,,Card insertion,04-01-2016 13:31
+EOR_302819,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Ahmedabad,RajSarav,GIMEC,5,AHMEDABAD,,ad-me01-icr02,,,,,09-12-2015 10:30,No,,Card insertion,04-01-2016 13:29
+EOR_302820,CEASE,EORIP,Ceased,,,,,RajSarav,GIMEC,,AHMEDABAD,,ad-me01-icr01,,,,,09-12-2015 10:32,No,,Card insertion,
+EOR_302823,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Pune,RajSarav,GIMEC,5,ERNAKULAM,,ek-me01-icr01,,,,,09-12-2015 10:39,No,,Card insertion,04-01-2016 13:29
+EOR_302825,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Pune,RajSarav,GIMEC,5,ERNAKULAM,,ek-me01-icr01,,,,,09-12-2015 10:42,No,,Card insertion,04-01-2016 13:16
+EOR_302828,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Kolkatta,RajSarav,GIMEC,5,KOLKATA,,kk-me01-icr01,,,,,09-12-2015 10:44,No,,Card insertion,04-01-2016 13:15
+EOR_302830,PROVISION,EORIP,Commissioned,,,,,RajSarav,GIMEC,,NOIDA,,dl-noi-icr01,,,,,09-12-2015 10:47,No,,Card insertion,
+EOR_302832,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Delhi,RajSarav,GIMEC,5,GURGAON,,dl-gur-icr01,,,,,09-12-2015 10:49,No,,Card insertion,04-01-2016 13:13
+EOR_302835,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Ahmedabad,RajSarav,GIMEC,5,SURAT,,ad-sur-icr01,,,,,09-12-2015 10:50,No,,Card insertion,04-01-2016 13:12
+EOR_302836,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Bhopal,RajSarav,GIMEC,5,DEWAS,,de-tr-icr01,,,,,09-12-2015 10:50,No,,Card insertion,04-01-2016 13:12
+EOR_302837,PROVISION,EORIP,Commissioned,,,,,RajSarav,GIMEC,,HUZUR,,bo-tr-icr01,,,,,09-12-2015 10:53,No,,Card insertion,
+EOR_302838,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,THIRUVANANTHAPURAM,,,,,,,09-12-2015 10:59,No,10-12-2015 00:00,Exceptional VP Approval//  Asianet ILL Upgrade 484100185125,
+EOR_302839,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_InstallConductPhysicalLayerTest,0,,IP-Field-Ops-Bhopal,RajSarav,GIMEC,5,HUZUR,,bo-tr-icr01,,,,,09-12-2015 10:56,No,,Card termination,11-12-2015 17:57
+EOR_302827,PROVISION,EORTX,Commissioned,,,,,nilotpal.g,GSPI,,DEWAS,,,,,,,09-12-2015 11:15,No,,Card Deletion,
+EOR_302854,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,MUMBAI,,,,,,,09-12-2015 11:22,No,09-12-2015 00:00,SFP Addition,
+EOR_302858,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,MUMBAI,,,,,,,09-12-2015 11:27,No,09-12-2015 00:00,SFP addition,
+EOR_302876,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,CHENNAI,,,,,,,09-12-2015 11:45,No,,Addition of Ciena 2.5G SFP at A-14-27 of CHNN-SWND-CN5430-01,
+EOR_302880,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Indore,nilotpal.g,GSPI,5,DEWAS,,,,,,,09-12-2015 11:50,No,,Deletion EOR For Dewas CD-02,17-12-2015 14:55
+EOR_302885,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,CHENNAI,,,,,,,09-12-2015 11:54,No,,Addition of 1XTejas STM16 SFP at  1-1-6 of CHNI_SIFYTIDEL_03##172.23.57.225,
+EOR_302898,CEASE,EORTX,Ceased,,,,,PGujarat,Provisioning-Network,,CHENNAI,,,,,,,09-12-2015 12:20,No,,SFP ADDITON,
+EOR_302910,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Bangalore,phanibhu,GSPI,5,BANGALORE,,,,,,,09-12-2015 12:38,No,,Card Deletion KIADB CD,17-12-2015 16:04
+EOR_302920,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chennai-ITMC,PGujarat,Provisioning-Network,5,CHENNAI,,,,,,,09-12-2015 12:48,No,,SFP ADDITION,09-12-2015 16:06
+EOR_302942,PROVISION,EORTX,Commissioned,,,,,phanibhu,GSPI,,BANGALORE,,,,,,,09-12-2015 13:06,No,09-12-2015 00:00,CARD AND XFP ADDITION at  BGLR_KIADB_OSN7500_03 ,
+EOR_302952,CEASE,EORTX,Ceased,,,,,aganpule,Provisioning-Network,,BANGALORE,,,,,,,09-12-2015 13:26,No,09-12-2015 00:00,SFP addition,
+EOR_302963,CEASE,EORTX,Ceased,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,09-12-2015 13:38,No,,Card insertion,
+EOR_302966,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,NOIDA,,,,,,,09-12-2015 13:40,No,,RE: Pre ordering approval  - Honda MPLS Upgrade in Noida - Timeline required - URGENT,
+EOR_302970,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,NOIDA,,,,,,,09-12-2015 13:41,No,,RE: Pre ordering approval  - Honda MPLS Upgrade in Noida - Timeline required - URGENT,
+EOR_302968,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,CHENNAI,,,,,,,09-12-2015 13:48,No,,CARD &SFP ADDITION,
+EOR_302975,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,CHENNAI,,,,,,,09-12-2015 13:49,No,,CARD &SFP ADDITION,
+EOR_303734,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,ramkumar.v,Provisioning-TxInventory,5,BANGALORE,,,,,,,13-12-2015 22:45,No,,SFP addition,14-12-2015 11:30
+EOR_304685,PROVISION,EORTX,Commissioned,,,,,amit.kumar1,Provisioning-TxInventory,,KOLKATA,,,,,,,16-12-2015 18:16,No,,RE: Reminder -  13P051115//33239342788,500M   Cognizant Technology Solutions India Pvt. Ltd
+EOR_302990,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,MUMBAI,,,,,,,09-12-2015 14:04,No,09-12-2015 00:00,Card + SFP addition,
+EOR_303025,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-TxInventory,,GURGAON,,,,,,,09-12-2015 15:24,No,,Addition of TP01 card at 8th slot of GRGN_VIRGIN_01 ,
+EOR_265773,PROVISION,EORIP,Commissioned,,,,,RajSarav,GIMEC,,ERNAKULAM,,ek-me01-icr01,,,,,29-06-2015 11:09,No,,Card insertion - ek-me01-icr01,
+EOR_282655,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,KOLHAPUR-MH,,,,,,,10-09-2015 12:26,No,10-09-2015 00:00,Huawei 10G card deletion under 11C Project,
+EOR_265781,PROVISION,EORIP,Commissioned,,,,,RajSarav,GIMEC,,ERNAKULAM,,ek-me01-icr02,,,,,29-06-2015 11:15,No,,Card insertion - ek-me01-icr02,
+EOR_248150,PROVISION,EORTX,Processing,EORTX_ConfigPort,0,ilyas.mohammed,SA-NOC,hemant.mhaisne,GSPI,5,MUMBAI,,,,,,,30-03-2015 14:40,No,,EOR for Huawei LSX card addition in LVSB,31-03-2015 10:34
+EOR_240393,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_CreateResource,0,,GIMEC,RajSarav,GIMEC,5,NEW DELHI,,dl-me01-icr02,,,,,23-02-2015 11:11,No,,Card Termination -  dl-me01-icr02,23-02-2015 18:06
+EOR_234922,PROVISION,EORTX,Commissioned,,,,,SGaikar,TX-ENG,,HYDERABAD,,,,,,,27-01-2015 11:44,No,,Card+sfp addition,
+EOR_234928,CEASE,EORTX,Ceased,,,,,neeraj.verma,GSPI,,NEW DELHI,,,,,,,27-01-2015 12:18,No,27-01-2015 00:00,Card addition in ECI undet PA,
+EOR_248073,PROVISION,EORTX,Commissioned,,,,,prashant.vast,Provisioning-Network,,NEW DELHI,,,,,,,30-03-2015 09:53,No,30-03-2015 00:00,"EOR raised for deletion of DIOM_04 card from slot I5 with GIG-Electrical SFP from Port I5-1, I5-2,; ",
+EOR_234942,PROVISION,EORTX,Commissioned,,,,,neeraj.verma,GSPI,,NEW DELHI,,,,,,,27-01-2015 12:26,No,27-01-2015 00:00,Card addition under MAN ph-3,
+EOR_258773,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,TX-ENG,PrSahu,GSPI,5,BANGALORE,,,,,,,25-05-2015 11:36,No,28-05-2015 00:00,Card Addition in MGRD SAG XDM2,28-05-2015 18:58
+EOR_240395,PROVISION,EORIP,Processing,EORIPNewCardInstallation_EORIP_CreateResource,0,,GIMEC,RajSarav,GIMEC,5,NEW DELHI,,dl-me01-icr01,,,,,23-02-2015 11:16,No,,Card Termination -  dl-me01-icr01,27-02-2015 02:23
+EOR_232051,PROVISION,EORTX,Commissioned,,,,,syelkar,GSPI,,MUMBAI,,,,,,,12-01-2015 10:13,No,,Card Deletion in 22-MUMBAI-TM at LVSB,
+EOR_234946,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,neeraj.verma,GSPI,5,NEW DELHI,,,,,,,27-01-2015 12:27,No,27-01-2015 00:00,Card addition under MAN ph-3,27-01-2015 13:14
+EOR_230969,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_DispatchCard,0,,MAndL-Delhi,amit.kumar1,Provisioning-TxInventory,5,NEW DELHI,,,,,,,05-01-2015 18:51,No,06-01-2015 00:00,L1 NNI with TTL @ Delhi VSB POP.//stm-16//IOR_186984,09-01-2015 12:33
+EOR_231917,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,hemant.pawar,Provisioning-TxInventory,5,MUMBAI,,,,,,,09-01-2015 15:38,No,09-01-2015 00:00,EOR raised for deletion of SFP CNA-SFP/2.5G/1310I/SM/LC from MUMB-PRBD-CD06 C-4-2 & C-4-4,09-01-2015 16:16
+EOR_233057,PROVISION,EORTX,Commissioned,,,,,balbhim.dhonde,Provisioning-Network,,CHENNAI,,,,,,,15-01-2015 12:32,No,,Addition of GigE electrical at 1-12-10 of CHNI_WIPROS3_02##172.22.176.23,
+EOR_234273,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,MUMBAI,,,,,,,21-01-2015 16:30,No,21-01-2015 00:00,SFP deletion from given mux.,
+EOR_235064,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,NMalwade,Provisioning-TxInventory,5,MUMBAI,,,,,,,27-01-2015 18:24,No,,Deletion EOR,27-01-2015 18:44
+EOR_236402,PROVISION,EORTX,Commissioned,,,,,nikhil.aru,Provisioning-TxInventory,,NEW DELHI,,,,,,,03-02-2015 13:35,No,03-02-2015 00:00,Delete gig Opt SFP from 1-6-10 of NDLH_ILL_30##172.23.205.33,
+EOR_230540,PROVISION,EORTX,Processing,EORTX_ConfigPort,0,ilyas.mohammed,SA-NOC,pankaj.potbhare,GSPI,5,EDALABAD,,,,,,,02-01-2015 10:49,No,,Card Addition @ CHain 22 Edilabd for google,05-01-2015 15:24
+EOR_230541,PROVISION,EORTX,Commissioned,,,,,pankaj.potbhare,GSPI,,EDALABAD,,,,,,,02-01-2015 10:53,No,,Card Addition @ CHain 5 Edilabd for google,
+EOR_230554,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,CHENNAI,,,,,,,02-01-2015 11:14,No,02-01-2015 00:00,card addition in given mux,
+EOR_230567,PROVISION,EORTX,Processing,EORTX_CreateEORTx,0,,Provisioning-Network,shashwata.singh,Provisioning-Network,5,NOIDA,,,,,,,02-01-2015 11:54,Yes,,Card insertion,14-01-2015 11:37
+EOR_230584,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 12:37,No,,091BENG623008869338 // 300M  // Ocwen Financial Solutions Pvt. Ltd. // ILL,
+EOR_230603,PROVISION,EORTX,Commissioned,,,,,nikhil.aru,Provisioning-TxInventory,,GURGAON,,,,,,,02-01-2015 13:45,No,,DEL DSL Internet Private Limited 091GURG030002449162 329933 Upgrade ILL 240 Mbps,
+EOR_230609,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 14:10,No,,FW: Tikona Digital Networks Pvt Ltd - NDE - 350038 / 091BENG1143010292860 - 150 Mbps - LM SHIFTING -,
+EOR_230613,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,PUNE,,,,,,,02-01-2015 14:16,No,,SFP ADDITION,
+EOR_230640,PROVISION,EORTX,Commissioned,,,,,PoGawali,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 15:54,No,02-01-2015 00:00,Deletion of Gig SFP from BGLR_KIADB_TJ1600_03_1-2-19,
+EOR_230651,PROVISION,EORTX,Commissioned,,,,,PoGawali,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 16:07,No,02-01-2015 00:00,BGLR_KIADB_TJ1600_04,
+EOR_230652,PROVISION,EORTX,Commissioned,,,,,PoGawali,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 16:12,No,02-01-2015 00:00,BGLR_KIADB_TJ1600_02,
+EOR_230668,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,MUMBAI,,,,,,,02-01-2015 16:49,No,,CARD  ADDITION,
+EOR_230678,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,NAGPUR,,,,,,,02-01-2015 17:32,No,05-01-2015 00:00,Ciena OM10G module Addition EOR for NLD - 11B Project,
+EOR_230681,PROVISION,EORTX,Commissioned,,,,,kishor.patil,Provisioning-TxInventory,,NEW DELHI,,,,,,,02-01-2015 17:46,No,,Card Insertion,
+EOR_230690,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,PUNE,,,,,,,02-01-2015 18:07,No,02-01-2015 00:00,card deletion from given mux.,
+EOR_230694,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,PUNE,,,,,,,02-01-2015 18:14,No,02-01-2015 00:00,card addition in given mux,
+EOR_230698,PROVISION,EORTX,Commissioned,,,,,nikhil.aru,Provisioning-TxInventory,,NEW DELHI,,,,,,,02-01-2015 18:21,No,,BT 349990 091NEWD1143011475334 & 091NEWD1143011475352,
+EOR_230700,PROVISION,EORTX,Commissioned,,,,,nikhil.aru,Provisioning-TxInventory,,NEW DELHI,,,,,,,02-01-2015 18:22,No,,BT 349990 091NEWD1143011475334 & 091NEWD1143011475352,
+EOR_230699,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 18:27,No,,((NAGARAJ Sir APPROVAL)) Expedite delivery : COF FOR E& Y REQUIRED URGENT >>>>> TCOM PO 4500011676 E,
+EOR_230703,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 18:28,No,,((NAGARAJ Sir APPROVAL)) Expedite delivery : COF FOR E& Y REQUIRED URGENT >>>>> TCOM PO 4500011676 E,
+EOR_230708,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,02-01-2015 19:14,No,02-01-2015 00:00,EOR RAISED FOR Addition of  STM16 SFP in 1-11-11 of MMB_LVSB_ITMC_1600_01,
+EOR_230709,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,CHENNAI,,,,,,,02-01-2015 19:20,No,,Addition EOR,
+EOR_230710,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,02-01-2015 19:21,No,02-01-2015 00:00,EOR RAISED FOR Addition of HCPU Card in Slot11 &  STM16 SFP 1-10-11 1-11-11 of LVSB_TJ1600C_04,
+EOR_230711,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_RaiseMRN,0,,MAN Field Ops-Chennai-MAN,aganpule,Provisioning-Network,5,CHENNAI,,,,,,,02-01-2015 19:25,No,02-01-2015 00:00,card addition in given mux,02-01-2015 19:45
+EOR_230714,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,02-01-2015 19:51,No,,EOR Raised for deletion of Gig sfp from 1-10-11 of  LVSB_TJ1600C_04,
+EOR_230720,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,02-01-2015 19:55,No,,EOR Raised for addition  Gig sfp in 1-8-20 of LVSB_TJ1600C_04,
+EOR_230722,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 20:52,No,,091BENG1143009681363 / 150Mbps to 300Mbps due to high transaction for Christmas + New Year business ,
+EOR_230723,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,02-01-2015 20:53,No,,091BENG1143009681363 / 150Mbps to 300Mbps due to high transaction for Christmas + New Year business ,
+EOR_230726,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,PUNE,,,,,,,03-01-2015 12:14,No,,SFP ADDITION,
+EOR_230731,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-Network,,NEW DELHI,,,,,,,03-01-2015 13:15,No,,Card insertion,
+EOR_230735,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-Network,,NEW DELHI,,,,,,,03-01-2015 13:32,No,,Card insertion,
+EOR_230741,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NOIDA,,,,,,,03-01-2015 14:37,No,,add card,
+EOR_230774,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,NOIDA,,,,,,,05-01-2015 11:29,No,05-01-2015 00:00,EOR RAISED FOR ADDITION  OF STM 16 IN NDA_NEPZ_TJ1600C_01 1-3-16 & 1-9-16,
+EOR_230775,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,NOIDA,,,,,,,05-01-2015 11:30,No,05-01-2015 00:00,EOR RAISED FOR ADDITION  OF STM 16 IN NDA_NEPZ_TJ1600C_01 1-3-16 & 1-9-16,
+EOR_230776,CEASE,EORTX,Ceased,,,,,hemant.pawar,Provisioning-TxInventory,,NOIDA,,,,,,,05-01-2015 11:52,No,05-01-2015 00:00,EOR RAISED FOR DELETION OF STM 16 FROM NDA_SEC60_TJ1600_01 1-2-1 & 1-3-1,
+EOR_230792,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,NEW DELHI,,,,,,,05-01-2015 12:10,No,05-01-2015 00:00,EOR RAISED FOR ADDITION  OF STM 16 SFP IN DHL_TJ1600C_04 1-1-16 ,
+EOR_230805,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,PUNE,,,,,,,05-01-2015 12:32,No,,SFP ADDITION,
+EOR_230798,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,NEW DELHI,,,,,,,05-01-2015 12:34,No,05-01-2015 00:00,EOR RAISED FOR DELETION OF STM 16 SFP FROM NDLH_ILL_30 1-5-10,
+EOR_230808,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,NOIDA,,,,,,,05-01-2015 12:37,No,05-01-2015 00:00,EOR RAISED FOR  DELETION OF STM16 SFP FROM NDA_SEC63_XDM31 I2-P2 & I8-P2 ,
+EOR_230810,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,NOIDA,,,,,,,05-01-2015 12:42,No,05-01-2015 00:00,EOR RAISED FOR  ADDITION OF STM16 SFP IN NDA_NEPZ_XDM2K_29 I4-P2 & I10-P2,
+EOR_230815,CEASE,EORTX,Ceased,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,05-01-2015 12:52,No,,BD SFP,
+EOR_230818,PROVISION,EORTX,Commissioned,,,,,kishor.patil,Provisioning-TxInventory,,HYDERABAD,,,,,,,05-01-2015 12:54,No,,Card Deletion,
+EOR_230819,PROVISION,EORTX,Processing,EORTXNewCardInstallation_UpdateProvisioningStatusErrorTask,0,,Provisioning-Network,ramkumar.v,Provisioning-TxInventory,5,BANGALORE,,,,,,,05-01-2015 12:55,No,,Card and SFP insertion,10-02-2015 12:46
+EOR_230831,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,05-01-2015 13:17,No,,Card and SFP insertion,
+EOR_230833,PROVISION,EORTX,COMMISSIONED,,,,,PrSahu,GSPI,,BANGALORE,,,,,,,05-01-2015 13:19,No,06-01-2015 00:00,Card Addition in KIADB-CD,
+EOR_230844,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,05-01-2015 13:29,No,, 091BENG623011369068 / YES BANK LTD / 100MB,
+EOR_230856,CEASE,EORTX,Ceased,,,,,shashwata.singh,Provisioning-TxInventory,,NEW DELHI,,,,,,,05-01-2015 14:38,No,,add card,
+EOR_230875,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,HYDERABAD,,,,,,,05-01-2015 14:54,No,,Addition EOR,
+EOR_230876,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,HYDERABAD,,,,,,,05-01-2015 14:56,No,,Addition EOR,
+EOR_230881,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,MUMBAI,,,,,,,05-01-2015 15:07,No,,SFP ADDITION,
+EOR_230902,PROVISION,EORTX,Commissioned,,,,,PrSahu,GSPI,,BANGALORE,,,,,,,05-01-2015 15:51,No,06-01-2015 00:00,Card Deletion in 13-BANGALORE,
+EOR_230903,PROVISION,EORTX,Commissioned,,,,,PrSahu,GSPI,,BANGALORE,,,,,,,05-01-2015 15:54,No,06-01-2015 00:00,LWFS Card Addition in 13-KIADB-TM,
+EOR_230918,PROVISION,EORTX,Commissioned,,,,,prashant.vast,Provisioning-Network,,NEW DELHI,,,,,,,05-01-2015 16:36,No,05-01-2015 00:00,EOR Raised for deletion of GIG-Optical SFP from NDLH_ILL_07, 172.22.152.224
+EOR_230919,PROVISION,EORTX,Commissioned,,,,,prashant.vast,Provisioning-Network,,NEW DELHI,,,,,,,05-01-2015 16:36,No,05-01-2015 00:00,EOR Raised for Addition of GIG-Optical SFP in  NDLH_ILL_32 , 172.23.225.129
+EOR_230916,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,hemant.pawar,Provisioning-TxInventory,5,NEW DELHI,,,,,,,05-01-2015 16:38,No,05-01-2015 00:00,EOR RAISED FOR DELETION OF SFP FROM DLHI-BSHB-CD04  A-14-18 & C-1-18 ,05-01-2015 17:06
+EOR_230920,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,hemant.pawar,Provisioning-TxInventory,5,NEW DELHI,,,,,,,05-01-2015 16:45,No,05-01-2015 00:00,EOR RAISED FOR ADDITION OF SFP IN DLHI-BSHB-CN5430-01 A-14-2 & C-1-17,05-01-2015 17:07
+EOR_230951,PROVISION,EORTX,Commissioned,,,,,priya.ck,GSPI,,CHENNAI,,,,,,,05-01-2015 17:59,No,06-01-2015 00:00,Addition of STM64 cards and XFPs in CHNI_XDM2K_100,
+EOR_230968,CEASE,EORTX,Ceased,,,,,NMalwade,Provisioning-TxInventory,,NOIDA,,,,,,,05-01-2015 18:50,No,,Addition EOR,
+EOR_237355,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,06-02-2015 19:09,No,,New Elan card ,
+EOR_230970,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,NMalwade,Provisioning-TxInventory,5,NOIDA,,,,,,,05-01-2015 18:53,No,,Addition EOR,19-02-2015 17:41
+EOR_230972,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,ERNAKULAM,,,,,,,05-01-2015 18:58,No,,RE: (((High Priority))) : POA VP approval // Asianet Cochin  ILL upg / SFDC id 1398013/ Urgent deliv,
+EOR_230973,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,ERNAKULAM,,,,,,,05-01-2015 18:59,No,,RE: (((High Priority))) : POA VP approval // Asianet Cochin  ILL upg / SFDC id 1398013/ Urgent deliv,
+EOR_230974,PROVISION,EORTX,Provisioned,,,,,santpati,Provisioning-Network,,ERNAKULAM,,,,,,,05-01-2015 19:00,No,,RE: (((High Priority))) : POA VP approval // Asianet Cochin  ILL upg / SFDC id 1398013/ Urgent deliv,
+EOR_230976,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,MUMBAI,,,,,,,05-01-2015 19:09,No,,Addition EOR,
+EOR_230983,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,MUMBAI,,,,,,,05-01-2015 19:25,No,,Addition EOr,
+EOR_230982,PROVISION,EORTX,Commissioned,,,,,SakArora,Provisioning-Network,,NEW DELHI,,,,,,,05-01-2015 19:31,No,05-01-2015 00:00,"EOR Raised for addition of  One base card  HCPULINE01 in DHL_TJ1600C_01; 172.23.38.97_ Slot 10, and ",
+EOR_230989,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,SakArora,Provisioning-Network,5,AMBALA,,,,,,,05-01-2015 19:33,No,05-01-2015 00:00,EOR Raised for addition of   STM-16 SFP,S16.1 SFPs in AMBL_TJ1600C_01
+EOR_230990,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chandigarh,SakArora,Provisioning-Network,5,AMBALA,,,,,,,05-01-2015 19:34,No,05-01-2015 00:00,EOR Raised for addition of  STM-16 SFP,S16.1 SFPs in AMBL_TJ1600C_02
+EOR_230980,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,05-01-2015 19:37,No,,SFP insertion,
+EOR_230991,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,NLD-Field-Ops-Patna,SakArora,Provisioning-Network,5,JAMMU,,,,,,,05-01-2015 19:37,No,05-01-2015 00:00,EOR Raised for addition of  four  STM-16 SFP,S16.1 SFPs in Jammu_Tj1600_01
+EOR_230992,CEASE,EORTX,Ceased,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,05-01-2015 19:43,No,,Card and SFP insertion,
+EOR_230995,PROVISION,EORTX,Commissioned,,,,,SakArora,Provisioning-Network,,NEW DELHI,,,,,,,05-01-2015 20:00,No,05-01-2015 00:00,EOR Raised for addition of  Two OTR16 in NDL_XDM73_MAN _ Port I5-3 & I6-3,
+EOR_230996,PROVISION,EORTX,Commissioned,,,,,SakArora,Provisioning-Network,,NEW DELHI,,,,,,,05-01-2015 20:07,No,05-01-2015 00:00,EOR Raised for addition of  STM-16 SFP,S16.1 SFPs in DHL_TJ1600C_03_ Port 1-10-16
+EOR_230998,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_RaiseMRN,0,,MAN Field Ops-Mumbai,hemant.pawar,Provisioning-TxInventory,5,MUMBAI,,,,,,,06-01-2015 09:28,No,,WWIL,06-01-2015 10:44
+EOR_231000,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,hemant.pawar,Provisioning-TxInventory,5,MUMBAI,,,,,,,06-01-2015 10:22,No,06-01-2015 00:00,EOR for Deletion of TET28 from slot 5 with krone module of MUM_LVSB_MC1_01, 172.22.13.97
+EOR_231011,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,PUNE,,,,,,,06-01-2015 11:14,No,,SFP ADDITION,
+EOR_231153,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NEW DELHI,,,,,,,06-01-2015 15:17,No,,add card,
+EOR_231150,CEASE,EORTX,Ceased,,,,,SGaikar,TX-ENG,,CHENNAI,,,,,,,06-01-2015 15:24,No,,Deletion of WCC cards,
+EOR_231163,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,06-01-2015 15:27,No,,091MUMB030010741518,
+EOR_231164,PROVISION,EORTX,Commissioned,,,,,SSKAMBLE,TX-ENG,,MUMBAI,,,,,,,06-01-2015 15:35,No,,deletion EOR,
+EOR_231166,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Jaipur,amit.kumar1,Provisioning-TxInventory,5,ALWAR,,,,,,,06-01-2015 15:45,No,07-01-2015 00:00,L1 NNI WITH TTSL @ ALWAR//STM-1 & STM-4,16-02-2015 15:14
+EOR_231175,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Jaipur,amit.kumar1,Provisioning-TxInventory,5,ALWAR,,,,,,,06-01-2015 15:52,No,07-01-2015 00:00,L1 NNI WITH TTSL @ ALWAR//STM-1 & STM-4,21-01-2015 15:42
+EOR_231193,PROVISION,EORTX,COMMISSIONED,,,,,shashwata.singh,Provisioning-Network,,MUMBAI,,,,,,,06-01-2015 16:40,No,,Card insertion,
+EOR_231215,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chennai-ITMC,SGaikar,TX-ENG,5,CHENNAI,,,,,,,06-01-2015 17:15,No,,Deletion of WCC cards,06-01-2015 19:09
+EOR_231228,PROVISION,EORTX,Commissioned,,,,,SGaikar,TX-ENG,,CHENNAI,,,,,,,06-01-2015 17:35,No,,Deletion of WCC cards,
+EOR_231230,PROVISION,EORTX,Processing,EORTXNewCardInstallation_UpdateProvisioningStatusErrorTask,0,,Provisioning-Network,ramkumar.v,Provisioning-TxInventory,5,BANGALORE,,,,,,,06-01-2015 17:41,No,,SFP insertion,10-02-2015 11:01
+EOR_231233,PROVISION,EORTX,Commissioned,,,,,SGaikar,TX-ENG,,HYDERABAD,,,,,,,06-01-2015 17:46,No,,Deletion of WCC cards,
+EOR_231239,PROVISION,EORTX,Processing,EORTX_ConfigPort,0,,SA-NOC,SGaikar,TX-ENG,5,HYDERABAD,,,,,,,06-01-2015 17:51,No,,Deletion of WCC cards,06-01-2015 17:53
+EOR_231232,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,06-01-2015 17:53,No,,SFP insertion,
+EOR_231245,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,06-01-2015 18:01,No,,Proactive,
+EOR_231272,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,omprakash.kore,Provisioning-TxInventory,5,GURGAON,,,,,,,06-01-2015 18:54,No,06-01-2015 00:00,2xHCPUline01 card required in GGN_INFINITY_TJ1600_01(Slot-8 & 9),07-01-2015 16:41
+EOR_231272,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_RaiseMRN,0,,MAN Field Ops-Gurgaon,omprakash.kore,Provisioning-TxInventory,5,GURGAON,,,,,,,06-01-2015 18:54,No,06-01-2015 00:00,2xHCPUline01 card required in GGN_INFINITY_TJ1600_01(Slot-8 & 9),07-01-2015 16:41
+EOR_231278,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,HYDERABAD,,,,,,,06-01-2015 19:23,No,,Addition EOR,
+EOR_231280,PROVISION,EORTX,Commissioned,,,,,NMalwade,Provisioning-TxInventory,,NEW DELHI,,,,,,,06-01-2015 19:29,No,,Addition EOR,
+EOR_231284,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,NMalwade,Provisioning-TxInventory,5,MUMBAI,,,,,,,06-01-2015 19:39,No,,Addition EOR,07-01-2015 19:40
+EOR_231289,PROVISION,EORTX,Processing,EORTXNewCardInstallation_UpdateProvisioningStatusErrorTask,0,,Provisioning-Network,NMalwade,Provisioning-TxInventory,5,HYDERABAD,,,,,,,06-01-2015 19:46,No,,Deletion EOR,08-01-2015 18:24
+EOR_231301,PROVISION,EORTX,Commissioned,,,,,amit.sheth,GSPI,,GANDHI NAGAR-GJ,,,,,,,07-01-2015 04:02,No,,Google Project Link1,
+EOR_231314,CEASE,EORTX,Ceased,,,,,SSKAMBLE,TX-ENG,,NEW DELHI,,,,,,,07-01-2015 10:11,No,,deletion eor DLHI-BSHB-DR-CD03,
+EOR_231316,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_DispatchCard,0,,MAndL-Pune,hemant.pawar,Provisioning-TxInventory,5,PUNE,,,,,,,07-01-2015 10:13,No,07-01-2015 00:00,EOR Raised for Addition of  1*Gig optical sfp in PUNE_ILL_18#1-6-10,08-01-2015 12:45
+EOR_231334,PROVISION,EORTX,Commissioned,,,,,sperneti,GSPI,,HYDERABAD,,,,,,,07-01-2015 10:55,No,,Ciena XFP addition under NLD11B Project,
+EOR_231333,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-Network,,KOLKATA,,,,,,,07-01-2015 10:56,No,,Card insertion,
+EOR_231347,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,MUMBAI,,,,,,,07-01-2015 11:19,No,,CARD  ADDITION,
+EOR_231378,PROVISION,EORTX,Commissioned,,,,,PrSahu,GSPI,,BANGALORE,,,,,,,07-01-2015 12:22,No,07-01-2015 00:00,Card Deletion in L11-KIADB,
+EOR_231380,PROVISION,EORTX,Commissioned,,,,,KriYadav,TX-ENG,,EDALABAD,,,,,,,07-01-2015 12:23,No,,L7-EDELABAD-TM,
+EOR_231382,PROVISION,EORTX,Commissioned,,,,,KriYadav,TX-ENG,,CHENNAI,,,,,,,07-01-2015 12:28,No,,L10-CHENNAI-TM,
+EOR_231422,PROVISION,EORTX,Commissioned,,,,,smuthusa,GSPI,,CHENNAI,,,,,,,07-01-2015 14:53,No,,card deletion ,
+EOR_232064,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-New Delhi,SSKAMBLE,TX-ENG,5,NEW DELHI,,,,,,,12-01-2015 11:24,No,,card deletion eor,12-01-2015 15:38
+EOR_231428,CEASE,EORTX,Ceased,,,,,NMalwade,Provisioning-TxInventory,,MUMBAI,,,,,,,07-01-2015 15:14,No,,Addition EOR,
+EOR_231429,PROVISION,EORTX,Commissioned,,,,,nikhil.aru,Provisioning-TxInventory,,NEW DELHI,,,,,,,07-01-2015 15:19,No,,091NOID030006574386,100M
+EOR_231430,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,07-01-2015 15:24,No,07-01-2015 00:00,EOR raised for Deletion of SFP  OTR4 from I10-P10 of MMB2_XDM20,
+EOR_231431,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,07-01-2015 15:28,No,07-01-2015 00:00,EOR raised for Addition of SFP OTR4 in OTR4 in I7-P9 of MMB3_XDM2K_02,
+EOR_231436,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,PUNE,,,,,,,07-01-2015 15:45,No,,CARD  ADDITION,
+EOR_231444,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,CHENNAI,,,,,,,07-01-2015 15:50,No,,SUTHERLAND GLOBAL SERVICES Pvt Ltd - 44239208495 & 091HYDE1143009785512 -- Need Timeline for this up,
+EOR_231445,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,CHENNAI,,,,,,,07-01-2015 15:51,No,,SUTHERLAND GLOBAL SERVICES Pvt Ltd - 44239208495 & 091HYDE1143009785512 -- Need Timeline for this up,
+EOR_231448,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Hyderabad,shashwata.singh,Provisioning-Network,5,HYDERABAD,,,,,,,07-01-2015 15:58,No,,DELETION,07-01-2015 19:43
+EOR_231450,PROVISION,EORTX,Commissioned,,,,,PrSahu,GSPI,,BANGALORE,,,,,,,07-01-2015 16:06,No,09-01-2015 00:00,LWFS Card Addition in L4-KIADB,
+EOR_231446,PROVISION,EORTX,Commissioned,,,,,debabrata.b,GSPI,,PUNE,,,,,,,07-01-2015 16:08,No,08-01-2015 00:00,New ECI Card Addition for Huawei OSN7500,
+EOR_231451,PROVISION,EORTX,Commissioned,,,,,PrSahu,GSPI,,BANGALORE,,,,,,,07-01-2015 16:09,No,09-01-2015 00:00,OM10G Card Addition in BGLR-KIADB-CD,
+EOR_231459,CEASE,EORTX,Ceased,,,,,kishor.patil,Provisioning-TxInventory,,VADODARA,,,,,,,07-01-2015 16:33,No,,Card Insertion,
+EOR_231465,PROVISION,EORTX,Commissioned,,,,,kishor.patil,Provisioning-TxInventory,,VADODARA,,,,,,,07-01-2015 16:42,No,,Card Insertion,
+EOR_231466,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,kishor.patil,Provisioning-TxInventory,5,VADODARA,,,,,,,07-01-2015 16:44,No,,Card Insertion,08-01-2015 12:32
+EOR_231467,PROVISION,EORTX,Ceased,,,,,aganpule,Provisioning-Network,,CHENNAI,,,,,,,07-01-2015 16:48,No,07-01-2015 00:00,card deletion from given mux.,
+EOR_231468,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-TxInventory,,BANGALORE,,,,,,,07-01-2015 16:49,No,,MUM-BAN WAN Upgrade_Sprint//091MUMB005009769609 -- Request ID : 1300825,
+EOR_231471,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-TxInventory,,BANGALORE,,,,,,,07-01-2015 16:50,No,,MUM-BAN WAN Upgrade_Sprint//091MUMB005009769609 -- Request ID : 1300825,
+EOR_231470,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,CHENNAI,,,,,,,07-01-2015 16:51,No,07-01-2015 00:00,card addition in given mux,
+EOR_231478,PROVISION,EORTX,Commissioned,,,,,SakArora,Provisioning-Network,,BANGALORE,,,,,,,07-01-2015 17:28,No,07-01-2015 00:00,EOR raised for addition of card TR04 with  GIG Optical SFP in BGLR_MPLS_TJ15_01_ 172.23.36.1,_slot 4
+EOR_231485,CEASE,EORTX,Ceased,,,,,SakArora,Provisioning-Network,,BANGALORE,,,,,,,07-01-2015 17:30,No,07-01-2015 00:00,EOR raised for addition of two  STM16 SFP, S16.1 SFPs in BGLR_ITPL_TJ1600_01
+EOR_231487,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_RaiseMRN,0,,MAN Field Ops-New Delhi,nikhil.aru,Provisioning-TxInventory,5,NEW DELHI,,,,,,,07-01-2015 17:31,No,,BT 349990 091NEWD1143011475334 & 091NEWD1143011475352,13-01-2015 10:37
+EOR_231488,CEASE,EORTX,Ceased,,,,,SakArora,Provisioning-Network,,BANGALORE,,,,,,,07-01-2015 17:32,No,07-01-2015 00:00,EOR Raised for addition of  Two OTR16 in BGL_METRO_ITPL_AAG_XDM1_ Port I11-1 & I12-1,
+EOR_231513,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,dakshirs,Provisioning-TxInventory,5,MUMBAI,,,,,,,07-01-2015 18:19,No,,SFP ADDITION,07-01-2015 18:19
+EOR_231515,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,dakshirs,Provisioning-TxInventory,5,MUMBAI,,,,,,,07-01-2015 18:21,No,,SFP ADDITION,08-01-2015 10:22
+EOR_231514,CEASE,EORTX,Ceased,,,,,KriYadav,TX-ENG,,BANGALORE,,,,,,,07-01-2015 18:21,No,,BGLR-SNJY-CD06,
+EOR_231521,PROVISION,EORTX,Commissioned,,,,,KriYadav,TX-ENG,,BANGALORE,,,,,,,07-01-2015 18:28,No,,BGLR-SNJY-CD06,
+EOR_231526,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,07-01-2015 19:01,No,,SFP insertion,
+EOR_231527,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,07-01-2015 19:14,No,07-01-2015 00:00,EOR Raised for Deletion of STM16 SFP From MMB1_TJ1600_1_CB#1-7-6,
+EOR_231528,PROVISION,EORTX,Commissioned,,,,,hemant.pawar,Provisioning-TxInventory,,MUMBAI,,,,,,,07-01-2015 19:17,No,07-01-2015 00:00,EOR Raised for Addition of STM16 SFP in LVSB_TJ1600C_04 1-11-2,
+EOR_231531,TERMINATE,EORTX,Terminating,EORTXTermination_UpdateProvisioningStatusErrorTask,0,,Provisioning-Network,shashwata.singh,Provisioning-TxInventory,5,NOIDA,,,,,,,07-01-2015 19:27,No,,delete card,07-01-2015 19:29
+EOR_231530,PROVISION,EORTX,Commissioned,,,,,aganpule,Provisioning-Network,,CHENNAI,,,,,,,07-01-2015 19:28,No,07-01-2015 00:00,card addition in given mux,
+EOR_231532,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NOIDA,,,,,,,07-01-2015 19:39,No,,delete card,
+EOR_231534,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NOIDA,,,,,,,07-01-2015 19:42,No,,add card,
+EOR_231533,CEASE,EORTX,Ceased,,,,,aganpule,Provisioning-Network,,CHENNAI,,,,,,,07-01-2015 19:43,No,07-01-2015 00:00,card deletion from given mux.,
+EOR_231535,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NOIDA,,,,,,,07-01-2015 19:45,No,,add card,
+EOR_231537,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,07-01-2015 19:48,No,,RE: MACD - Larsen & Tourbo Infotech Ltd.,344447
+EOR_231540,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NEW DELHI,,,,,,,07-01-2015 20:08,No,,delete card,
+EOR_231541,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-TxInventory,,NEW DELHI,,,,,,,07-01-2015 20:17,No,,add card,
+EOR_231545,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_CreateResourceAndRaiseWO,0,,Provisioning-TxInventory,NMalwade,Provisioning-TxInventory,5,NOIDA,,,,,,,08-01-2015 10:15,No,,addition EOr ,19-02-2015 18:34
+EOR_231550,PROVISION,EORTX,Commissioned,,,,,dakshirs,Provisioning-TxInventory,,MUMBAI,,,,,,,08-01-2015 10:32,No,,CARD &SFP ADDITION,
+EOR_231563,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,08-01-2015 11:09,No,,SFP insertion,
+EOR_231567,PROVISION,EORTX,Commissioned,,,,,ramkumar.v,Provisioning-TxInventory,,BANGALORE,,,,,,,08-01-2015 11:27,No,,SFP insertion,
+EOR_233998,PROVISION,EORTX,Commissioned,,,,,AzanSidd,Provisioning-Network,,NEW DELHI,,,,,,,20-01-2015 17:01,No,20-01-2015 00:00,EOR raised for addition of 2* TR04 with 4*Gig optical SFP in NDLH_TJ1500_01 Slot3 & 14 TR04 with Gig,
+EOR_231643,PROVISION,EORTX,Commissioned,,,,,shashwata.singh,Provisioning-Network,,INDORE,,,,,,,08-01-2015 13:03,No,,Card insertion,
+EOR_231654,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Mumbai,dakshirs,Provisioning-TxInventory,5,MUMBAI,,,,,,,08-01-2015 13:13,No,,CARD  ADDITION,08-01-2015 18:11
+EOR_231640,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,08-01-2015 13:31,No,,RE: Software Technology Parks of India - ILL - 345294 / 091BENG030004416748 - 128 Mbps - HOT UPGRADE,
+EOR_231665,PROVISION,EORTX,Commissioned,,,,,santpati,Provisioning-Network,,BANGALORE,,,,,,,08-01-2015 13:32,No,,RE: Software Technology Parks of India - ILL - 345294 / 091BENG030004416748 - 128 Mbps - HOT UPGRADE,
+EOR_231666,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Gurgaon,sudhakar.kumar,GSPI,5,GURGAON,,,,,,,08-01-2015 13:47,No,,card addition in GGN_XDM21 at masterpiece,15-01-2015 11:01
+EOR_231669,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Gurgaon,sudhakar.kumar,GSPI,5,GURGAON,,,,,,,08-01-2015 13:49,No,,card addition in GGN_SEC44_XDM34 at sec-44,15-01-2015 11:02
+EOR_231693,PROVISION,EORTX,Commissioned,,,,,SSKAMBLE,TX-ENG,,KOLKATA,,,,,,,08-01-2015 14:34,No,,xfp deletion,
+EOR_231708,PROVISION,EORTX,Commissioned,,,,,SGaikar,TX-ENG,,MUMBAI,,,,,,,08-01-2015 15:00,No,,olp addition EOR,
+EOR_231710,PROVISION,EORTX,Commissioned,,,,,SGaikar,TX-ENG,,MUMBAI,,,,,,,08-01-2015 15:03,No,,olp addition EOR,
+EOR_231712,PROVISION,EORTX,Processing,EORTXNewCardInstallation_EORTX_InstallConductPhysicalLayerTest,0,,MAN Field Ops-Chennai-ITMC,amit.kumar1,Provisioning-TxInventory,5,CHENNAI,,,,,,,08-01-2015 15:05,No,09-01-2015 00:00,L1 NNI with TTL @ Chennai - Urgent,12-02-2015 15:07
