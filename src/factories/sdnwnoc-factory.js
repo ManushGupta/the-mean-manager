@@ -8,7 +8,7 @@ const sdnwnocFactory = angular.module('app.sdnwnocFactory',[])
 	function getTasks ($scope) {
 
 		$http.get('/sdnwnocs').success(response => {
-			$scope.sdnwnocs = response.sdnwnocs;zz
+			$scope.sdnwnocs = response.sdnwnocs;
 		});
 	}
 

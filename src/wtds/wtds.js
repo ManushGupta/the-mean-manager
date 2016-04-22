@@ -1,6 +1,4 @@
 import _ from 'lodash';	
-import moment from 'moment';
-
 export default function($scope, wtdFactory, $filter){
 
     let params = {
@@ -8,6 +6,10 @@ export default function($scope, wtdFactory, $filter){
         //isChecked: false
         
     };	
+
+    $scope.date = new Date();
+    $scope.date = Date.now();
+    //console.log($scope.date);
     //console.log(wtdFactory.createTask);
 
 	//$scope.wtds = [
@@ -30,233 +32,645 @@ export default function($scope, wtdFactory, $filter){
 
 	$filter('wtdFilter')();
 
-    $scope.onGenReport = wtd => {
+	$scope.onGenReport = wtd => {
 
+		var pm = ["Abhijeet Murudkar",
+					"ABHISHEK RAJ",
+					"Abhishek Sharma (Service Delivery)",
+					"Adinath Bankar",
+					"Ajay Bhore",
+					"AKASH SHINDE3",
+					"AKSHAY KAVATHEKAR",
+					"AKSHAY MASARKAR",
+					"Ameya Vaidya",
+					"AMI BHUVA",
+					"AMIT AMBRE",
+					"Amit Ghosh",
+					"Amit Ghosh (PM)",
+					"AMIT MANE",
+					"Amit Shardule",
+					"Amit Verma",
+					"Amod Sane",
+					"Amol Bhoite",
+					"Amol Dhage",
+					"Anilkumar Kn",
+					"Anirban Chakraborty",
+					"Ankur Goyal",
+					"ANSHUL GUPTA2",
+					"Anu Arora",
+					"Anuj Gupta",
+					"ANURAG NIRMAL",
+					"Anurag Singh",
+					"Anuranjan Jyoti",
+					"APURVA SHAHANE",
+					"Arora Ajay",
+					"Ayyappillai P",
+					"BALAKRISHNAN YADHAVAR",
+					"BHUSHAN GAIKWAD",
+					"Bijoy Thomas",
+					"Blanca Ortanez",
+					"Brad Allen",
+					"Calla Teo",
+					"CHANDRASHEKHAR TIWARI",
+					"Chetan Sharma",
+					"Christopher Limon",
+					"Daneshvar D",
+					"Dattaprasad Khanolkar",
+					"DEBAJYOTI DAS2",
+					"Deepak Bhatt",
+					"Deepak Shukla",
+					"DEVANAND MAROTI HONRAO",
+					"Dipak Kumar",
+					"Enrique Sellem",
+					"Florian Bonvissuto",
+					"Gajraj Thind",
+					"HANUMAN REGAR",
+					"Haresh Jarkani",
+					"Hari Sharma",
+					"Harry Cheema",
+					"HARSHAL SHINDE2",
+					"Hemant Samant",
+					"Hitendra Mathur",
+					"Indrajeet Ghosh",
+					"Jaykesh Sevak",
+					"Jeevan Nair",
+					"JINAL SHAH",
+					"Jitin Pagdhare",
+					"Jyoti Rawat",
+					"K Rajesh",
+					"Kairav Mody",
+					"Kalaivani Swamynathan",
+					"Kalaivani Swamynathan",
+					"Kamil Benadjaoud",
+					"Karan Singh",
+					"KATHIRAVAN PANDIAN",
+					"Kavin Domadia",
+					"Krishna Murthy Bandaru",
+					"Kumar Vinay",
+					"Kunal Roy",
+					"Lokesh.Sukumar",
+					"Majumdar Anirban",
+					"MANIKANDAN UNNIKRISHNAN",
+					"Manish Mishra(ASD)",
+					"Manoj Bhagwat",
+					"Manoj Mishra2",
+					"Manoranjan Tiwari",
+					"Marco Dosch",
+					"Maulik Vyas",
+					"Maxime Schneider",
+					"MAYUR BABAR",
+					"Mayuresh Wagle",
+					"MEENAKSHI CHAUDHARY",
+					"MEENAKSHI CHAUDHARY",
+					"Mohammed Ashfaq",
+					"MONISH PATEL",
+					"Mukesh Babu K",
+					"MUKESH YADAV",
+					"Nandi DB",
+					"NARESH SONAWANE",
+					"NAYAN KOLTE",
+					"Neha Saini",
+					"Neha Thakur",
+					"NIKHIL CHAVAN",
+					"Nikhil Warang",
+					"Nikunj Gala",
+					"Nilesh Indulkar",
+					"Nilesh M Patil",
+					"Nilesh Naik2",
+					"Nilesh Vishe",
+					"Olivier Goncalves",
+					"Pankaj Kumbhar",
+					"Paresh Kumthekar",
+					"Paul Bennett",
+					"Ponnalagu S",
+					"POONAM JAGTAP",
+					"Prasenjit Podder",
+					"Prashant Pai",
+					"Prashant Sonawane",
+					"Prashant Srivastava",
+					"PRATEEK TIWARI",
+					"Praveen Tiwari",
+					"Priyal Dabre",
+					"Raghavendra Ramdurgkar",
+					"Rahul R Pai",
+					"Rajeev Sharma",
+					"Rajendra Bhikule",
+					"Rajib Debnath",
+					"Rakesh Salve",
+					"Ram Ganga",
+					"RAMAMURTHY V",
+					"ramesh.maguluri",
+					"Ravindra Kale",
+					"Revatee Bande",
+					"Robert Mathias",
+					"Rohan Barmukh2",
+					"Rohan Goyal",
+					"ROSHANI GAROLE",
+					"Ruchi Singh",
+					"Saaj Miah",
+					"Sabana Bee",
+					"Sachin Chavan2",
+					"Sachin Shingte",
+					"Sameer Chitnis",
+					"Sameer Shigwan",
+					"Samir Sanas",
+					"Sanckar Pathmanathan",
+					"Sandeep Barpute",
+					"SANDEEP DANGE",
+					"SANDEEP DESHMUKH",
+					"Sandesh Mankar",
+					"SANJAY AKRE",
+					"Sankalp Shah",
+					"Santiago Epstein",
+					"SANTOSH ADAGALE",
+					"Satish Gaikwad",
+					"SEEMA VARMA",
+					"Senthil kumar M (MSK)",
+					"SHAIKH MUSTHAQEEM",
+					"Shailendra Baghel",
+					"Shankar S Shukla",
+					"SHANTANU MUKHERJEE2",
+					"SHAOXIONG ZHENG",
+					"Shipra Sharma",
+					"SHOBHA THORAT",
+					"Sibo Panda",
+					"Sijo Mathew",
+					"Smita Choudhary",
+					"Smita Phadtare",
+					"Snehal Desai",
+					"SONALI DOHALE",
+					"Sridhar B (PM)",
+					"STEPHEN LIM",
+					"Subir Banerjee",
+					"Sumit Jejurikar",
+					"Suraj Shekhar",
+					"Suresh Nasina",
+					"Sushant D Jangam",
+					"Sushil Kale",
+					"SUVARNA SHIRKE",
+					"Tatiana Zbarsky",
+					"Tito Mukherjee",
+					"Tony Dormio",
+					"Umamahesh K",
+					"UMASHANKAR VENKATESH",
+					"Umed kaule",
+					"Varun Mehta",
+					"Varun Mehta",
+					"Varun Singhal",
+					"Vijayapradheep Kuppuswamy",
+					"VIKAS LOTANKAR",
+					"VIKI GANDHI",
+					"Vikram Vandhu",
+					"VIKRANT MHATRE",
+					"Vinay Nagavelly",
+					"VINAYA JADHAV2",
+					"Virender Kumar",
+					"Vishal Advani",
+					"VK Rai",
+					"Vrunda Ghole",
+					"Yogesh Awasthi",
+					"Akshay Agnihotri",
+					"Chintan Patel",
+					"Dhyey Kothari",
+					"Amit Singh (SPOT)"];
 
-		var date3 = $scope.toTimeStamp(wtd.configCompDate);
-		var date1 = $scope.toTimeStamp(wtd.order_issued_date);
-		var date2 = $scope.toTimeStamp(wtd.crfs_date);
-
-
-    	//CRAMMER REPORT
-    	if(wtd.nims_id!="NA"){
-
-    		if((wtd.startDepDate!="NA")&&(wtd.endDepDate!="NA")){
-    			wtd.TAT = ([$scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date)]-[$scope.toTimeStamp(wtd.endDepDate) - $scope.toTimeStamp(wtd.startDepDate)])/86400000;
-    		}
-    		else{
-    			wtd.TAT = ($scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date))/86400000;
-
-    		}
-
-
-    		if(wtd.order_type == 'Backbone'){
-    			if(wtd.TAT <= 5){
-    				wtd.TAT_status = "Within TAT";
-    			}
-    			else{
-    				wtd.TAT_status = "Outside TAT";
-    			}
-    		}
-    		else{
-    			if(wtd.TAT<=1){
-    				wtd.TAT_status = "Within TAT";
-    			}
-    			else{
-    				wtd.TAT_status = "Outside TAT";
-    			}
-    			
-    		}
-    		if(wtd.circuit_action_type == 'Cancel'){
-    			wtd.order_type = "Termination Order";
-    		}
-    		else{
-    			if(wtd.service_type == "*N/A*"){
-    				wtd.order_type = "Backbone";
-    			}
-    			else{
-    				if((wtd.service_type == "VTS")||(wtd.service_type == "VTSPREM")||(wtd.service_type == "ENTVTS")){
-
-    					wtd.order_type = "VOICE";
-    				}
-    				else{
-    					if((wtd.service_type == "GLOBETH")||(wtd.service_type == "LOLA")){
-    						wtd.order_type = "DGE";
-    					}
-    					else{
-    						wtd.order_type = "IPLC";
-    					}
-    				}
-    			}
-    		}
-    	}
-
-
-    	//VIZNET REPORT
-
-    	if(wtd.viznet_id != "NA"){
-
-    		//VIZNET TAT
-
-    		if((wtd.startDepDate!="NA")&&(wtd.endDepDate!="NA")){
-    			wtd.TAT = ([$scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date)]-[$scope.toTimeStamp(wtd.endDepDate) - $scope.toTimeStamp(wtd.startDepDate)])/86400000;
-    		}
-    		else{
-    			wtd.TAT = ($scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date))/86400000;
-
-    		}
-
-    		//VIZNET TAT STATUS
-
-			if(wtd.TAT <= 1){
-				wtd.TAT_status = "Within TAT";
-			}
-			else{
-				wtd.TAT_status = "Outside TAT";
-			}
+		var pm_fe = ["Amol Bhoite",
+						"Gajraj Thind",
+						"VK Rai",
+						"Sibo Panda",
+						"Paresh Kumthekar",
+						"Dipak Kumar",
+						"Sachin Shingte",
+						"Dipak Kumar",
+						"Amol Bhoite",
+						"Subir Banerjee",
+						"Vishal Advani",
+						"Hariharan S",
+						"Umamahesh K",
+						"Dipak Kumar",
+						"Kairav Mody",
+						"Anu Arora",
+						"Amit Ghosh",
+						"Raghavendra Ramdurgkar",
+						"VK Rai",
+						"Arora Ajay",
+						"Ayyappillai P",
+						"Snehal Desai",
+						"Amol Dhage",
+						"Kunal Roy",
+						"Deepak Bhatt",
+						"Adinath Bankar",
+						"Smita Phadtare",
+						"Smita Phadtare",
+						"Neha Thakur",
+						"Hariharan S",
+						"Kunal Roy",
+						"Kairav Mody",
+						"Amol Bhoite",
+						"Raghavendra Ramdurgkar",
+						"Jaykesh Sevak",
+						"Rhys Lancaster",
+						"Vishal Advani",
+						"Gajraj Thind",
+						"Ayyappillai P",
+						"Jaykesh Sevak",
+						"Jaykesh Sevak",
+						"Amit Ghosh",
+						"Neha Thakur",
+						"Jaykesh Sevak",
+						"Amol Dhage",
+						"Kairav Mody",
+						"Jaykesh Sevak",
+						"Rohan Goyal",
+						"Maxime Schneider",
+						"Hariharan S",
+						"Dipak Kumar",
+						"Vishal Advani",
+						"Maxime Schneider",
+						"Maxime Schneider",
+						"Neha Thakur",
+						"Kairav Mody",
+						"Amol Bhoite",
+						"Sibo Panda",
+						"Hariharan S",
+						"Amit Ghosh",
+						"VK Rai",
+						"Neha Thakur",
+						"Nandi DB",
+						"Ponnalagu S",
+						"VK Rai",
+						"Tatiana Zbarsky",
+						"Tatiana Zbarsky",
+						"Maxime Schneider",
+						"Amol Bhoite",
+						"RAMAMURTHY V",
+						"Smita Phadtare",
+						"Sandeep Barpute",
+						"Mohammed Ashfaq",
+						"Arora Ajay",
+						"Mohammed Ashfaq",
+						"Ayyappillai P",
+						"Ponnalagu S",
+						"Jaykesh Sevak",
+						"Kairav Mody",
+						"Kairav Mody",
+						"Gajraj Thind",
+						"Maxime Schneider",
+						"Smita Phadtare",
+						"Rhys Lancaster",
+						"Dattaprasad Khanolkar",
+						"Kairav Mody",
+						"Anu Arora",
+						"Anu Arora",
+						"Anilkumar Kn",
+						"Raghavendra Ramdurgkar",
+						"Ponnalagu S",
+						"Praveen Tiwari",
+						"VK Rai",
+						"Kairav Mody",
+						"Gajraj Thind",
+						"Anu Arora",
+						"Amit Ghosh",
+						"Subir Banerjee",
+						"Kairav Mody",
+						"Rohan Goyal",
+						"Dipak Kumar",
+						"Paresh Kumthekar",
+						"Amit Ghosh",
+						"Dipak Kumar",
+						"Maxime Schneider",
+						"Amol Bhoite",
+						"Raghavendra Ramdurgkar",
+						"Maxime Schneider",
+						"Anilkumar Kn",
+						"Neha Thakur",
+						"VK Rai",
+						"Mohammed Ashfaq",
+						"Amit Ghosh",
+						"Mohammed Ashfaq",
+						"Dipak Kumar",
+						"Amit Ghosh",
+						"Paresh Kumthekar",
+						"Arora Ajay",
+						"Ponnalagu S",
+						"Anu Arora",
+						"Snehal Desai",
+						"Anilkumar Kn",
+						"Sibo Panda",
+						"Nandi DB",
+						"Amit Ghosh",
+						"Mohammed Ashfaq",
+						"VK Rai",
+						"Kairav Mody",
+						"Jaykesh Sevak",
+						"Kairav Mody",
+						"Jaykesh Sevak",
+						"Dipak Kumar",
+						"Jaykesh Sevak",
+						"Maxime Schneider",
+						"Ponnalagu S",
+						"Rohan Goyal",
+						"Amit Ghosh",
+						"Jaykesh Sevak",
+						"Maxime Schneider",
+						"Paresh Kumthekar",
+						"Rohan Goyal",
+						"Anilkumar Kn",
+						"Dipak Kumar",
+						"Sushil Kale",
+						"Prasenjit Podder",
+						"Subir Banerjee",
+						"Rohan Goyal",
+						"Maxime Schneider",
+						"Snehal Desai",
+						"Smita Phadtare",
+						"Maxime Schneider",
+						"Ponnalagu S",
+						"Prasenjit Podder",
+						"Ayyappillai P",
+						"VK Rai",
+						"Praveen Tiwari",
+						"Calla Teo",
+						"Anu Arora",
+						"Neha Thakur",
+						"Arora Ajay",
+						"Mohammed Ashfaq",
+						"Sibo Panda",
+						"VK Rai",
+						"Raghavendra Ramdurgkar",
+						"Paresh Kumthekar",
+						"Sandeep Barpute",
+						"Vishal Advani",
+						"Amit Ghosh",
+						"Kairav Mody",
+						"Umamahesh K",
+						"Sandeep Barpute",
+						"Kairav Mody",
+						"Raghavendra Ramdurgkar",
+						"Subir Banerjee",
+						"Hariharan S",
+						"Jaykesh Sevak",
+						"Brad Allen",
+						"Kunal Roy",
+						"Nilesh Naik2",
+						"Kairav Mody",
+						"Tatiana Zbarsky",
+						"Tatiana Zbarsky",
+						"Prasenjit Podder",
+						"Mohammed Ashfaq",
+						"Amol Bhoite",
+						"Prashant Sonawane",
+						"Anu Arora",
+						"Sushil Kale",
+						"Raghavendra Ramdurgkar",
+						"Smita Phadtare",
+						"Anu Arora",
+						"Rhys Lancaster",
+						"Hariharan S",
+						"Vishal Advani",
+						"Ayyappillai P",
+						"Vinay Nagavelly",
+						"Vinay Nagavelly",
+						"Vinay Nagavelly",
+						"Pranay Pratap Singh"];
+		var vsd = ["Raghavendra Ramdurgkar",
+					"Gajraj Thind",
+					"VK Rai",
+					"Sibo Panda",
+					"Raghavendra Ramdurgkar",
+					"Jaykesh Sevak",
+					"Amit Ghosh",
+					"Jaykesh Sevak",
+					"Raghavendra Ramdurgkar",
+					"Amit Ghosh",
+					"Rhys Lancaster",
+					"Hariharan S",
+					"Kunal Roy",
+					"Jaykesh Sevak",
+					"Kairav Mody",
+					"Kunal Roy",
+					"Amit Ghosh",
+					"Raghavendra Ramdurgkar",
+					"VK Rai",
+					"Arora Ajay",
+					"Kunal Roy",
+					"Raghavendra Ramdurgkar",
+					"VK Rai",
+					"Kunal Roy",
+					"Jaykesh Sevak",
+					"Sibo Panda",
+					"Smita Phadtare",
+					"Smita Phadtare",
+					"Amit Ghosh",
+					"Hariharan S",
+					"Kunal Roy",
+					"Kairav Mody",
+					"Raghavendra Ramdurgkar",
+					"Raghavendra Ramdurgkar",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Rhys Lancaster",
+					"Gajraj Thind",
+					"Kunal Roy",
+					"Jaykesh Sevak",
+					"Jaykesh Sevak",
+					"Amit Ghosh",
+					"Amit Ghosh",
+					"Jaykesh Sevak",
+					"VK Rai",
+					"Kairav Mody",
+					"Jaykesh Sevak",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Hariharan S",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Rhys Lancaster",
+					"Rhys Lancaster",
+					"Amit Ghosh",
+					"Kairav Mody",
+					"Raghavendra Ramdurgkar",
+					"Sibo Panda",
+					"Hariharan S",
+					"Amit Ghosh",
+					"VK Rai",
+					"Amit Ghosh",
+					"VK Rai",
+					"Anilkumar Kn",
+					"Kairav Mody",
+					"Tatiana Zbarsky",
+					"Tatiana Zbarsky",
+					"Rhys Lancaster",
+					"Raghavendra Ramdurgkar",
+					"Amit Ghosh",
+					"Smita Phadtare",
+					"Anilkumar Kn",
+					"Anilkumar Kn",
+					"Arora Ajay",
+					"Anilkumar Kn",
+					"Kunal Roy",
+					"Anilkumar Kn",
+					"Jaykesh Sevak",
+					"Kairav Mody",
+					"Kairav Mody",
+					"Gajraj Thind",
+					"Rhys Lancaster",
+					"Smita Phadtare",
+					"Rhys Lancaster",
+					"Amit Ghosh",
+					"Kairav Mody",
+					"Kunal Roy",
+					"Kunal Roy",
+					"Anilkumar Kn",
+					"Raghavendra Ramdurgkar",
+					"Anilkumar Kn",
+					"Amit Ghosh",
+					"VK Rai",
+					"Kairav Mody",
+					"Gajraj Thind",
+					"Kunal Roy",
+					"Amit Ghosh",
+					"Amit Ghosh",
+					"Kairav Mody",
+					"Jaykesh Sevak",
+					"Jaykesh Sevak",
+					"Raghavendra Ramdurgkar",
+					"Amit Ghosh",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Raghavendra Ramdurgkar",
+					"Raghavendra Ramdurgkar",
+					"Rhys Lancaster",
+					"Anilkumar Kn",
+					"Amit Ghosh",
+					"VK Rai",
+					"Anilkumar Kn",
+					"Amit Ghosh",
+					"Anilkumar Kn",
+					"Jaykesh Sevak",
+					"Amit Ghosh",
+					"Raghavendra Ramdurgkar",
+					"Arora Ajay",
+					"Anilkumar Kn",
+					"Kunal Roy",
+					"Raghavendra Ramdurgkar",
+					"Anilkumar Kn",
+					"Sibo Panda",
+					"VK Rai",
+					"Amit Ghosh",
+					"Anilkumar Kn",
+					"Ravindra Kale",
+					"Kairav Mody",
+					"Jaykesh Sevak",
+					"Kairav Mody",
+					"Jaykesh Sevak",
+					"Jaykesh Sevak",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Anilkumar Kn",
+					"Jaykesh Sevak",
+					"Amit Ghosh",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Raghavendra Ramdurgkar",
+					"Jaykesh Sevak",
+					"Anilkumar Kn",
+					"Jaykesh Sevak",
+					"Raghavendra Ramdurgkar",
+					"VK Rai",
+					"Amit Ghosh",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Raghavendra Ramdurgkar",
+					"Smita Phadtare",
+					"Rhys Lancaster",
+					"Anilkumar Kn",
+					"Amit Ghosh",
+					"Kunal Roy",
+					"VK Rai",
+					"Amit Ghosh",
+					"Rhys Lancaster",
+					"Kunal Roy",
+					"Amit Ghosh",
+					"Arora Ajay",
+					"Anilkumar Kn",
+					"Sibo Panda",
+					"Smita Phadtare",
+					"Raghavendra Ramdurgkar",
+					"Raghavendra Ramdurgkar",
+					"Anilkumar Kn",
+					"Rhys Lancaster",
+					"Amit Ghosh",
+					"Kairav Mody",
+					"Kunal Roy",
+					"Anilkumar Kn",
+					"Kairav Mody",
+					"Raghavendra Ramdurgkar",
+					"Amit Ghosh",
+					"Hariharan S",
+					"Jaykesh Sevak",
+					"Rhys Lancaster",
+					"Kunal Roy",
+					"Amit Ghosh",
+					"Kairav Mody",
+					"Tatiana Zbarsky",
+					"Tatiana Zbarsky",
+					"VK Rai",
+					"Anilkumar Kn",
+					"Raghavendra Ramdurgkar",
+					"Amit Ghosh",
+					"Kunal Roy",
+					"Raghavendra Ramdurgkar",
+					"Raghavendra Ramdurgkar",
+					"Smita Phadtare",
+					"Kunal Roy",
+					"Rhys Lancaster",
+					"Hariharan S",
+					"Rhys Lancaster",
+					"Kunal Roy",
+					"Raghavendra Ramdurgkar",
+					"Raghavendra Ramdurgkar",
+					"Raghavendra Ramdurgkar",
+					"Pravesh Bhardwaj"];
 		
 
+		for(var i=0;i<199;i++) {
+			if(wtd.program_manager == pm[i]){
+				wtd.pm_first_level_escalation = pm_fe[i];
+				wtd.vsd_mapping = vsd[i];
+			}
+		}
 
-    		if((wtd.circuit_action_type == 'Change of BSO')||(wtd.circuit_action_type == 'Media Route Change')||(wtd.circuit_action_type == 'Shifting Of Local Loop')){
-    			wtd.ot_viznet = "Shifting Order";
-    		}
-    		else{
-    			if(wtd.circuit_action_type == 'Order Fullfillment'){
-    				wtd.order_type = "New Order";
-    			}
-    			else{
-    				if((wtd.circuit_action_type == 'Terminate Circuit')||(wtd.circuit_action_type == 'Ceased')){
-    					wtd.order_type = "Termination Order";
-    				}
-    				else{
-    					wtd.order_type = "NA";
-    				}
-    			}
-    		}
+		var date2 = $scope.toTimeStamp(wtd.e2e_testing_date);
+		var date1 = $scope.toTimeStamp(wtd.inbasket_date);
+		
+		//wtd.TAT = "NA";
 
-    		if((wtd.service_type == 'Interswitch')||(wtd.service_type == 'Singaling Link')||(wtd.service_type == 'Voice National')||(wtd.service_type == 'Voice International')){
-    			wtd.ent = "VOICE";
-    		}
-    		else{
-    			if((wtd.service_type == 'IPLC')||(wtd.service_type  == 'IPLC For Call Centers Service')||(wtd.service_type = 'ILL')||(wtd.service_type = 'MMR/Cross Connect')||(wtd.service_type = 'INSTACC')){
-    				wtd.ent = "IPLC";
-    			}
-    			else{
-    				wtd.ent = "DGE";
-    			}
-    		}
-
+		if((wtd.e2e_testing_date!=undefined)){
+    			wtd.TAT = (date2-date1)/86400000;
+    			wtd.pm_TAT = ($scope.date - date2)/86400000;
+    			//wtd.pm_TAT = $scope.date;
+    	}
+    	else{
+    		wtd.TAT = 0;
+    		wtd.pm_TAT = 0;
     	}
 
 
-    	//M6 Report
-    	if(wtd.m6_copf_id != 'NA'){
+    	if(wtd.TAT<=5){
+    		wtd.TAT_status = "Within TAT";
+    	}
+    	else{
+    		wtd.TAT_status = "Outside TAT";
+    	}
 
 
     		
-    		if(wtd.circuit_action_type=='TERMINATE'){
-    			wtd.order_type = "Termination Order";
-    		}
-    		else{
-    			if((wtd.circuit_action_type=='BSO Change')||(wtd.circuit_action_type=='LM Shifting')){
-
-    				wtd.order_type = "Shifting Order";
-
-    			}
-    			else{
-    				wtd.order_type = "New Order";
-    			}
-    		}
-
-    		wtd.ent = wtd.service_type;
-
-    		//m6 TAT with CRFS
-    		if((wtd.order_type=='New Order')||(wtd.order_type=='Shifting Order')){
-    			wtd.TAT = (date3-date1)/86400000;
-    		}
-    		else{
-    			if(wtd.order_type=='Termination Order'){
-    				if(date2>=date1){
-    					wtd.TAT = (date3-date2)/86400000 - 1;
-    				}
-    				else{
-    					wtd.TAT = (date3-date1-1)/86400000 -1;
-    				}
-    			}
-    		}
-
-    		if(wtd.TAT < 0){
-    			wtd.TAT = 0;
-    		}
-
-    		//m6 TAT STATUS
-    		if(wtd.TAT <= 1){
-				wtd.TAT_status = "Within TAT";
-			}
-			else{
-				wtd.TAT_status = "Outside TAT";
-			}
-
-    	}////M6 end
 
 
-    	//IOR REPORT
 
-    	if(wtd.ior_id!="NA"){
+	}
 
-    		wtd.order_type = 'IOR-IP/TX Order';
-
-    		if((wtd.startDepDate!="NA")&&(wtd.endDepDate!="NA")){
-    			wtd.TAT = ([$scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date)]-[$scope.toTimeStamp(wtd.endDepDate) - $scope.toTimeStamp(wtd.startDepDate)])/86400000;
-    		}
-    		else{
-    			wtd.TAT = ($scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date))/86400000;
-
-    		}
-
-    		//IOR TAT STATUS
-
-			if(wtd.TAT <= 1){
-				wtd.TAT_status = "Within TAT";
-			}
-			else{
-				wtd.TAT_status = "Outside TAT";
-			}
-
-
-    	}
-
-    	//nccm report
-
-		if(wtd.nccm_id!="NA"){
-
-    		//wtd.order_type = 'IOR-IP/TX Order';
-
-    		if((wtd.startDepDate!="NA")&&(wtd.endDepDate!="NA")){
-    			wtd.TAT = ([$scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date)]-[$scope.toTimeStamp(wtd.endDepDate) - $scope.toTimeStamp(wtd.startDepDate)])/86400000;
-    		}
-    		else{
-    			wtd.TAT = ($scope.toTimeStamp(wtd.configCompDate) - $scope.toTimeStamp(wtd.order_issued_date))/86400000;
-
-    		}
-
-    		//NCCM TAT STATUS
-
-			if(wtd.TAT <= 1){
-				wtd.TAT_status = "Within TAT";
-			}
-			else{
-				wtd.TAT_status = "Outside TAT";
-			}
-
-
-    	}
-
-    	
-
-    }
-
-	
 	$scope.toTimeStamp = function(date) {
 	if(date == undefined){return 0;}
 	else {
@@ -275,16 +689,30 @@ export default function($scope, wtdFactory, $filter){
 	
 	$scope.onEditClick = wtd => {
 		wtd.isEditing = true;
-		wtd.updatedTask1 = wtd.dependency_owner;
-		wtd.updatedTask2 = wtd.startDepDate;
-		wtd.updatedTask3 =	wtd.endDepDate;
-		wtd.updatedTask4 = wtd.remarks;
-		wtd.updatedTask5 = wtd.assigned;
-		wtd.updatedTask6 = wtd.order_status;
-		wtd.updatedTask7 =	wtd.vp_approval
-		wtd.updatedTask8 = wtd.configCompDate;
-		wtd.updatedTask9 = wtd.testCompDate;
-		wtd.updatedTask10 = wtd.hanging_deletion;
+		wtd.updatedTask1 = wtd.tiger_id;
+		wtd.updatedTask2 = wtd.viznetm6id;
+		wtd.updatedTask3 =	wtd.gam_id;
+		wtd.updatedTask4 = wtd.mrc_converted;
+		wtd.updatedTask5 = wtd.nrc_converted;
+		wtd.updatedTask6 = wtd.sales_region;
+		wtd.updatedTask7 =	wtd.customer_name;
+		wtd.updatedTask8 = wtd.program_manager;
+		wtd.updatedTask9 = wtd.provisioner_name;
+		wtd.updatedTask10 = wtd.inbasket_date;
+		wtd.updatedTask11 = wtd.wtd_owner_name;
+		wtd.updatedTask12 = wtd.service_type;
+		wtd.updatedTask13 = wtd.e2e_testing_date;
+		wtd.updatedTask14 = wtd.turn_up_date;
+		wtd.updatedTask15 = wtd.activation_date;
+		wtd.updatedTask16 = wtd.activity_progress_log;
+		wtd.updatedTask17 = wtd.current_dependency;
+		wtd.updatedTask18 = wtd.program_manager_input;
+		wtd.updatedTask19 = wtd.tiger_status;
+		wtd.updatedTask20 = wtd.viznetm6status;
+		wtd.updatedTask21 = wtd.team_status;
+
+		
+
 	};
 
 	$scope.onCancelClick = wtd => {
@@ -307,122 +735,6 @@ export default function($scope, wtdFactory, $filter){
 	$scope.isCrammerChecked = true;
 	$scope.isViznetChecked = true;
 	$scope.isM6Checked = true;
-	$scope.isBPM_IORChecked = true;
-	$scope.isBPM_NCCMChecked = true;
-
-	var truth = [$scope.isCrammerChecked, $scope.isViznetChecked, $scope.isM6Checked, $scope.isBPM_IORChecked, $scope.isBPM_NCCMChecked];
-	
-	var value = ["","","","",""]
-	
-	$scope.search = { nims_id: value[0] , viznet_id : value[1] , m6_copf_id : value[2] , ior_id : value[3] , nccm_id : value[4]};
-
-    $scope.onM6Click = () => {
-		
-		$scope.isM6Checked = !$scope.isM6Checked;
-		truth = [$scope.isCrammerChecked, $scope.isViznetChecked, $scope.isM6Checked, $scope.isBPM_IORChecked, $scope.isBPM_NCCMChecked];
-
-		for(var i=0;i<5;i++){
-
-			if(truth[i] == true){
-				value[i]="";
-			}
-			else{
-				value[i]="NA";
-			}
-
-		}
-		$scope.search = { nims_id: value[0] , viznet_id : value[1] , m6_copf_id : value[2] , ior_id : value[3] , nccm_id : value[4]};
-		console.log($scope.search);
-	};
-
-
-
-    $scope.onCrammerClick = () => {
-		
-		$scope.isCrammerChecked = !$scope.isCrammerChecked;
-		truth = [$scope.isCrammerChecked, $scope.isViznetChecked, $scope.isM6Checked, $scope.isBPM_IORChecked, $scope.isBPM_NCCMChecked];
-			
-		console.log($scope.isCrammerChecked);
-
-		for(var i=0;i<5;i++){
-
-			if(truth[i] == true){
-				value[i]="";
-			}
-			else{
-				value[i]="NA";
-			}
-
-		}
-		$scope.search = { nims_id: value[0] , viznet_id : value[1] , m6_copf_id : value[2] , ior_id : value[3] , nccm_id : value[4]};
-		console.log($scope.search);
-	};
-
-
-    $scope.onViznetClick = () => {
-		
-		$scope.isViznetChecked = !$scope.isViznetChecked;
-		truth = [$scope.isCrammerChecked, $scope.isViznetChecked, $scope.isM6Checked, $scope.isBPM_IORChecked, $scope.isBPM_NCCMChecked];
-		
-		console.log($scope.isViznetChecked);
-
-		for(var i=0;i<5;i++){
-
-			if(truth[i] == true){
-				value[i]="";
-			}
-			else{
-				value[i]="NA";
-			}
-
-		}
-		$scope.search = { nims_id: value[0] , viznet_id : value[1] , m6_copf_id : value[2] , ior_id : value[3] , nccm_id : value[4]};
-		console.log($scope.search);
-	};
-
-
-    $scope.onBPM_IORClick = () => {
-		
-		$scope.isBPM_IORChecked = !$scope.isBPM_IORChecked;
-		truth = [$scope.isCrammerChecked, $scope.isViznetChecked, $scope.isM6Checked, $scope.isBPM_IORChecked, $scope.isBPM_NCCMChecked];
-		
-		console.log($scope.isBPM_IORChecked);
-
-		for(var i=0;i<5;i++){
-
-			if(truth[i] == true){
-				value[i]="";
-			}
-			else{
-				value[i]="NA";
-			}
-
-		}
-		$scope.search = { nims_id: value[0] , viznet_id : value[1] , m6_copf_id : value[2] , ior_id : value[3] , nccm_id : value[4]};
-		console.log($scope.search);
-	};
-
-
-    $scope.onBPM_NCCMClick = () => {
-		
-		$scope.isBPM_NCCMChecked = !$scope.isBPM_NCCMChecked;
-		truth = [$scope.isCrammerChecked, $scope.isViznetChecked, $scope.isM6Checked, $scope.isBPM_IORChecked, $scope.isBPM_NCCMChecked];
-		
-		console.log($scope.isBPM_NCCMChecked);
-
-		for(var i=0;i<5;i++){
-
-			if(truth[i] == true){
-				value[i]="";
-			}
-			else{
-				value[i]="NA";
-			}
-
-		}
-		$scope.search = { nims_id: value[0] , viznet_id : value[1] , m6_copf_id : value[2] , ior_id : value[3] , nccm_id : value[4]};
-		console.log($scope.search);
-	};
 
 
 

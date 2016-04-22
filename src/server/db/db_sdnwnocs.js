@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var db2 = mongoose.connect('mongodb://localhost/sdnwnocs');
+var db2 = mongoose.createConnection('mongodb://localhost/sdnwnocs');
 
 	
 

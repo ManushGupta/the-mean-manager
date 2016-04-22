@@ -8,7 +8,11 @@ import sdnwnocFactory from 'factories/sdnwnoc-factory';
 import sdnwnocsController from 'sdnwnocs/sdnwnocs';
 import sdnwnocFilter from 'factories/sdnwnoc-filter';
 
-const app = angular.module('app', [uiRouter, todoFactory.name, todoFilter.name, sdnwnocFactory.name, sdnwnocFilter.name]);
+import wtdFactory from 'factories/wtd-factory';
+import wtdsController from 'wtds/wtds';
+import wtdFilter from 'factories/wtd-filter';
+
+const app = angular.module('app', [uiRouter, todoFactory.name, todoFilter.name, sdnwnocFactory.name, sdnwnocFilter.name, wtdFactory.name, wtdFilter.name]);
 
 app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     $urlRouterProvider.otherwise('/');
@@ -17,6 +21,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         .state('wtd', {
             url: '/wtd',
             template: require('wtds/wtds.html'),
+            controller: wtdsController
             
         })
         .state('sdnwnoc', {

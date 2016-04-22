@@ -4,7 +4,8 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-    Sdnwnoc.find(function(err, results) {
+    Sdnwnoc.find({ $and : [ {$or: [ {'process_type': 'BTNCCM'  }, { 'process_type':'EOREQUIPTX' } ]}, { $or: [{'task_name':'Eor_Equip_Tx_Provisioning_VerifyPhysicalAT'},{'task_name':'NCCM_BM_Tx_ConfigureTxServiceInPEWindow'},{'task_name':'EOR_Equip_Tx_Termination_DecomissionLogicalresources'}]}] },function(err, results) {
+
         if (err) { console.log(err); }
 
         res.send({ sdnwnocs: results });

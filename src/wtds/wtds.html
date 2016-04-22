@@ -27,7 +27,7 @@
 			
 			<th><form class="form-inline"><input class="form-control" placeholder="NRC(Converted)" ng-model="search.nrc_converted">NRC(converted)</input></form></th>
 			
-			<th><form class="form-inline"><input class="form-control" placeholder="Evolve Status" ng-model="search.evolve_status">Evolve Status</input></form></th>
+			
 			<th><form class="form-inline"><input class="form-control" placeholder="Sales Region" ng-model="search.sales_region">Sales Region</input></form></th>
 			<th><form class="form-inline"><input class="form-control" placeholder="Customer Name" ng-model="search.customer_name">Customer Name</input></form></th>
 
@@ -68,12 +68,15 @@
 
 			<th><form class="form-inline"><input class="form-control" placeholder="Current Dependency" ng-model="search.current_dependency">Current Dependency</input></form></th>
 			<th><form class="form-inline"><input class="form-control" placeholder="Program Manager Input" ng-model="search.program_manager_input">Program Manager Input</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Evolve Status" ng-model="search.evolve_status">Evolve Status</input></form></th>
 			<th><form class="form-inline"><input class="form-control" placeholder="tiger_status" ng-model="search.tiger_status">Tiger Status</input></form></th>
 			<th><form class="form-inline"><input class="form-control" placeholder="viznetm6status" ng-model="search.viznetm6status">Viznet / M6 Status</input></form></th>
 
 
 			<th><form class="form-inline"><input class="form-control" placeholder="TAT(in days)" ng-model="search.TAT" >TAT(in days)</input></form></th>
 			<th><form class="form-inline"><input class="form-control" placeholder="TAT Status" ng-model="search.TAT_status">TAT Status</input></form></th>
+			<th><form class="form-inline"><input class="form-control" placeholder="Program Manager TAT" ng-model="search.pm_TAT">Program Manager TAT</input></form></th>
+
 			<th><form class="form-inline"><input class="form-control" placeholder="Team Status" ng-model="search.team_status">Team Status</input></form></th>
 
 
@@ -86,7 +89,7 @@
 		<tr ng-repeat='wtd in filtered = (wtds | filter: search | wtdFilter:startDate:endDate)'>
 			<td><input type="checkbox" ng-checked="wtd.isCompleted" ng-click="onCompletedClick(wtd)"/></td>
 			
-			<td ng-show="isCrammerChecked">
+			<td ng-show="isCrammerChecked" ng-init="onGenReport(wtd)">
 				<span ng-if="!wtd.isEditing"
 					class="wtds__task" 
 					ng-class="{'wtds__task--completed':wtd.isCompleted}">
@@ -294,15 +297,98 @@
 						<option>Paul Bennett</option>
 						<option>Ponnalugu S</option>
 						<option>Poonam Jagtap</option>
+						<option>Prasenjit Podder</option>
+						<option>Prashant Pai</option>
+						<option>Prashant Sonawane</option>
+						<option>Prashant Srivastava</option>
+						<option>Prateek Tiwari</option>
+						<option>Praveen Tiwari</option>
+						<option>Priyal Dabre</option>
+						<option>Raghavendra Ramdurgkar</option>
+						<option>Rahuk R Pai</option>
+						<option>Rajeev Sharma</option>
+						<option>Rajendra Bhikule</option>
+						<option>Rajib Debnath</option>
+						<option>Rakesh Salve</option>
+						<option>Ram Ganga</option>
+						<option>Ramamurthy V</option>
+						<option>ramesh.maguluri</option>
+						<option>Ravindra Kale</option>
+						<option>Revatee Bande</option>
+						<option>Robert Mathias</option>
+						<option>Rohan Barmukh2</option>
+						<option>Rohan Goyal</option>
+						<option>Roshani Garole</option>
+						<option>Ruchi Singh</option>
+						<option>Saaj Miah</option>
+						<option>sabana Bee</option>
+						<option>Sachin Chavan2</option>
+						<option>Sachin Shingte</option>
+						<option>Sameer Chitnis</option>
+						<option>Sameer Chigwan</option>
+						<option>Samir Sanas</option>
+						<option>Sanckar Pathmanathan</option>
+						<option>Sandeep Barpute</option>
+						<option>Sandeep Dange</option>
+						<option>Sandeep Deshmukh</option>
+						<option>Sandesh Mankar</option>
+						<option>Sanjay Akre</option>
+						<option>Sankalp Shah</option>
+						<option>Santiago Epstein</option>
+						<option>Santosh Adagale</option>
+						<option>satish Gaikwad</option>
+						<option>Seema Varma</option>
+						<option>Senthil Kumar M(MSK)</option>
+						<option>Shaikh Mushtaqeem</option>
+						<option>Shailendra Baghel</option>
+						<option>Shankar S Shukla</option>
+						<option>Shantanu Mukherjee2</option>
+						<option>Shaoxiong Zheng</option>
+						<option>Shipra Sharma</option>
+						<option>Shobha Thorat</option>
+						<option>Sibo Panda</option>
+						<option>Sijo Mathew</option>
+						<option>Smita Choudhary</option>
+						<option>Smita Phadtare</option>
+						<option>Snehal Desai</option>
+						<option>Sonali Dohale</option>
+						<option>Sridhar B(PM)</option>
+						<option>Stepehen Lim</option>
+						<option>Subir Banerjee</option>
+						<option>Sumit Jejurikar</option>
+						<option>Suraj Shekhar</option>
+						<option>Suresh Nasina</option>
+						<option>Sushant D Jangam</option>
+						<option>Sushil Kale</option>
+						<option>Suvarna Shirke</option>
+						<option>Tatiana Zabarsky</option>
+						<option>Tito Mukherjee</option>
+						<option>Tony Dormio</option>
+						<option>Umamahesh K</option>
+						<option>Umamahesh Venkatesh</option>
+						<option>Umed Kaule</option>
+						<option>Varun Mehta</option>
+						<option>Varun Singhal</option>
+						<option>Viajayapradheep Kuppuswamy</option>
+						<option>Vikas Lotankar</option>
+						<option>Viki Gandhi</option>
+						<option>Vikram Vandhu</option>
+						<option>Vikrant Mahatre</option>
+						<option>Vinay Nagavelly</option>
+						<option>Vinaya Jadhav2</option>
+						<option>Virendra Kumar</option>
+						<option>Vishal Advani</option>
+						<option>VK Rai</option>
+						<option>Vrunda Ghole</option>
+						<option>Yogesh Awasthi</option>
+						<option>Askshay Agnihotri</option>
+						<option>Chintan Patel</option>
+						<option>Dhyey Kothari</option>
+						<option>Amit Singh (SPOT)</option>
 					</select>
 				</form>
 			</td>
-			<td>
-				<span class="wtds__task" 
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.program_manager}}
-				</span>
-			</td>
+			
 			<td>
 				<span class="wtds__task" 
 					ng-class="{'wtds__task--completed':wtd.isCompleted}">
@@ -324,15 +410,23 @@
 					{{wtd.provisioner_name}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.provisioner_name" ng-model="wtd.updatedTask8">
+					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.provisioner_name" ng-model="wtd.updatedTask9">
 				</form>
 			</td>
 
 			<td>
-				<span class="wtds__task" ng-model="date"
+				<span ng-if="!wtd.isEditing" class="wtds__task" ng-model="date"
 					ng-class="{'wtds__task--completed':wtd.isCompleted}">
 					{{wtd.inbasket_date}}
 				</span>
+				<form ng-submit="updateTask(wtd)">
+					<div class="input-group date" ng-if="wtd.isEditing" data-provide="datepicker">
+						<input type="text" class="form-control wtds_update-input" ng-value="wtd.e2e_testing_date" ng-model="wtd.updatedTask10">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</form>
 			</td>
 
 			<td>
@@ -342,20 +436,16 @@
 					{{wtd.wtd_owner_name}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.wtd_owner_name" ng-model="wtd.updatedTask9">
-						<option>DGE</option>
-						<option>IPLC</option>
-						<option>EMPT</option>
-						<option>EAS</option>
-						<option>VNO</option>
-						<option>GVPN</option>
-						<option>GVPN-L3NNI</option>
-						<option>DIA</option>
-						<option>INET</option>
-						<option>VIDEO</option>
-						<option>ENTVTS</option>
-						<option>IZO</option>
-						<option>SIP</option>
+					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.wtd_owner_name" ng-model="wtd.updatedTask11">
+						<option>Uday</option>
+						<option>Saurabh</option>
+						<option>Raj</option>
+						<option>Kunal</option>
+						<option>Ram</option>
+							<option>Amir</option>
+						<option>Shruti</option>
+						<option>Shrikant</option>
+					
 					</select> 
 				</form>
 			</td>
@@ -367,7 +457,7 @@
 					{{wtd.service_type}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.service_type" ng-model="wtd.updatedTask10">
+					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.service_type" ng-model="wtd.updatedTask12">
 						<option>DGE</option>
 						<option>IPLC</option>
 						<option>EMPT</option>
@@ -392,7 +482,7 @@
 				</span>
 				<form ng-submit="updateTask(wtd)">
 					<div class="input-group date" ng-if="wtd.isEditing" data-provide="datepicker">
-						<input type="text" class="form-control wtds_update-input" ng-value="wtd.e2e_testing_date" ng-model="wtd.updatedTask11">
+						<input type="text" class="form-control wtds_update-input" ng-value="wtd.e2e_testing_date" ng-model="wtd.updatedTask13">
 						<div class="input-group-addon">
 							<span class="glyphicon glyphicon-th"></span>
 						</div>
@@ -407,7 +497,7 @@
 				</span>
 				<form ng-submit="updateTask(wtd)">
 					<div class="input-group date" ng-if="wtd.isEditing" data-provide="datepicker">
-						<input type="text" class="form-control wtds_update-input" ng-value="wtd.turn_up_date" ng-model="wtd.updatedTask12">
+						<input type="text" class="form-control wtds_update-input" ng-value="wtd.turn_up_date" ng-model="wtd.updatedTask14">
 						<div class="input-group-addon">
 							<span class="glyphicon glyphicon-th"></span>
 						</div>
@@ -422,7 +512,7 @@
 				</span>
 				<form ng-submit="updateTask(wtd)">
 					<div class="input-group date" ng-if="wtd.isEditing" data-provide="datepicker">
-						<input type="text" class="form-control wtds_update-input" ng-value="wtd.activation_date" ng-model="wtd.updatedTask12">
+						<input type="text" class="form-control wtds_update-input" ng-value="wtd.activation_date" ng-model="wtd.updatedTask15">
 						<div class="input-group-addon">
 							<span class="glyphicon glyphicon-th"></span>
 						</div>
@@ -437,7 +527,7 @@
 					{{wtd.activity_progress_log}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.activity_progress_log" ng-model="wtd.updatedTask13">
+					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.activity_progress_log" ng-model="wtd.updatedTask16">
 				</form>
 			</td>
 
@@ -448,7 +538,7 @@
 					{{wtd.current_dependency}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.current_dependency" ng-model="wtd.updatedTask14">
+					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.current_dependency" ng-model="wtd.updatedTask17">
 						<option>PM-RFT</option>
 						<option>PM-CACP</option>
 						<option>Billing Closure</option>
@@ -476,7 +566,7 @@
 					{{wtd.program_manager_input}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.program_manager_input" ng-model="wtd.updatedTask15">
+					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.program_manager_input" ng-model="wtd.updatedTask18">
 				</form>
 			</td>
 			<td>
@@ -486,85 +576,37 @@
 					{{wtd.tiger_status}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.order_status" ng-model="wtd.updatedTask6">
-						<option>Pending</option>
+					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.tiger_status" ng-model="wtd.updatedTask19">
+						<option>Issued</option>
 						<option>Completed</option>
+						<option>NA</option>
+						<option>Not Issued</option>
+
 					</select>
 				</form>
 			</td>
-
-
 			<td>
 				<span ng-if="!wtd.isEditing"
-					class="wtds__task" 
+					class="wtds__task"
 					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.vp_approval}}
+					{{wtd.viznetm6status}}
 				</span>
 				<form ng-submit="updateTask(wtd)">
-					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.vp_approval" ng-model="wtd.updatedTask7">
+					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.viznetm6status" ng-model="wtd.updatedTask20">
+						<option>Issued</option>
+						<option>Completed</option>
+						<option>NA</option>
+						<option>Not Issued</option>
+						
+					</select>
 				</form>
-			</td>
-
-			<td>
-				<span ng-if="!wtd.isEditing" class="wtds__task" ng-model="date"
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.configCompDate}}
-				</span>
-				<form ng-submit="updateTask(wtd)">
-					<div class="input-group date"  ng-if="wtd.isEditing" data-provide="datepicker">
-						<input type="text" class="form-control wtds_update-input" ng-value="wtd.configCompDate" ng-model="wtd.updatedTask8" >
-						<div class="input-group-addon">
-							<span class="glyphicon glyphicon-th"></span>
-						</div>
-					</div>
-				</form>
-			</td>
+			</td>	
 			
 
-			<td>
-				<span ng-if="!wtd.isEditing" class="wtds__task" 
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.testCompDate}}
-				</span>
-				<form ng-submit="updateTask(wtd)">
-					<div class="input-group date" ng-if="wtd.isEditing" data-provide="datepicker">
-						<input type="text" class="form-control wtds_update-input" ng-value="wtd.testCompDate" ng-model="wtd.updatedTask9">
-						<div class="input-group-addon">
-							<span class="glyphicon glyphicon-th"></span>
-						</div>
-					</div>
-				</form>
-			</td>
-			<td>
-				<span ng-if="!wtd.isEditing"
-					class="wtds__task" 
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.hanging_deletion}}
-				</span>
-				<form ng-submit="updateTask(wtd)">
-					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.hanging_deletion" ng-model="wtd.updatedTask10">
-				</form>
-			</td>
-			<td>
-				<span 
-					class="wtds__task" 
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.order_type}}
-				</span>
-		
 
-			</td>
+			
 			<td>
-				<span 
-					class="wtds__task" 
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.ent}}
-				</span>
-		
-
-			</td>
-			<td>
-				<span ng-if="(toTimeStamp(wtd.configCompDate) !== undefined)||(toTimeStamp(wtd.order_issued_date) !== undefined)"
+				<span ng-if="(toTimeStamp(wtd.inbasket_date) !== undefined)||(toTimeStamp(wtd.e2e_testing_date) !== undefined)"
 					class="wtds__task" 
 					ng-class="{'wtds__task--completed':wtd.isCompleted}">
 					{{wtd.TAT}}
@@ -579,12 +621,38 @@
 			</td>
 
 			<td>
+				<span 
+					class="wtds__task" 
+					ng-class="{'wtds__task--completed':wtd.isCompleted}">
+					{{wtd.pm_TAT}}
+				</span>
+			</td>
+
+			<td>
+				<span ng-if="!wtd.isEditing"
+					class="wtds__task"
+					ng-class="{'wtds__task--completed':wtd.isCompleted}">
+					{{wtd.team_status}}
+				</span>
+				<form ng-submit="updateTask(wtd)">
+					<select ng-if="wtd.isEditing" class="form-control wtds_update-input" ng-value="wtd.team_status" ng-model="wtd.updatedTask21">
+						<option>Pending</option>
+						<option>Completed</option>
+						
+					</select>
+				</form>
+			</td>
+
+
+
+			<td>
 				<button ng-if="!wtd.isEditing" class="btn btn-info" ng-click="onEditClick(wtd)">Edit</button>
 				<button ng-if="!wtd.isEditing" class="btn btn-danger" ng-click="deleteTask(wtd)">Delete</button>
 
 				<button ng-if="wtd.isEditing" class="btn btn-primary" ng-click="updateTask(wtd)">Save</button>
 				<button ng-if="wtd.isEditing" class="btn btn-default" ng-click="onCancelClick(wtd)">Cancel</button>
 			</td>
+
 		</tr>
 	</table>
 	</div>

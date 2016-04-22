@@ -1,7 +1,6 @@
 import angular from 'angular';
-//import moment from 'moment';
-const sdnwnocFilter = angular.module('app.sdnwnocFilter',[])
-.filter('sdnwnocFilter', function() {
+const wtdFilter = angular.module('app.wtdFilter',[])
+.filter('wtdFilter', function() {
   
 	
 		return function (items,startDate,endDate) {
@@ -22,7 +21,7 @@ const sdnwnocFilter = angular.module('app.sdnwnocFilter',[])
 					//if (tf > df && tt < dt)  {
 					//	arrayToReturn.push(items[i]);
     				//}
-    				var input = items[i]['order_issued_date'];
+    				var input = items[i]['inbasket_date'];
     				if(input==undefined){
     					arrayToReturn.push(items[i]);
     				}
@@ -55,4 +54,4 @@ const sdnwnocFilter = angular.module('app.sdnwnocFilter',[])
 
 });
 
-export default sdnwnocFilter;
+export default wtdFilter;
