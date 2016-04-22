@@ -50,9 +50,15 @@ wb3 = open_workbook('Cramer_completed.xls')
 ws3 = wb3.sheet_by_index(0)
 c3 = ws3.row_values
 
-wb4 = open_workbook('M6_completed.xls')
+wb4 = open_workbook('M6_OPP_completed.xls')
 ws4 = wb4.sheet_by_index(0)
 c4 = ws4.row_values
+
+wb5 = open_workbook('M6_OPP_completed.xls')
+ws5 = wb5.sheet_by_index(0)
+c5 = ws5.row_values
+
+
 for row1 in c1:
 	#print row1[2].value
 	for row in c:
@@ -77,6 +83,9 @@ for row1 in c1:
 
 	for row4 in range(ws4.nrows):
 		if(row1[2].value == c4(row4)[9][2:] + '_' + c4(row4)[5]):
+			row1[24].value = "Completed"
+	for row5 in range(ws5.nrows):
+		if(row1[2].value == c5(row5)[6][2:]+ '_'+ c5(row5)[12]):
 			row1[24].value = "Completed"
 
 wb1.save("updated_master.xlsx")
