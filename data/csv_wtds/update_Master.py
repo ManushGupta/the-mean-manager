@@ -3,7 +3,14 @@ import csv
 import numpy as np
 import xlrd
 from openpyxl import load_workbook,Workbook
+
+from pymongo import MongoClient()
+
+client = MongoClient()
+db = client.wtds
+
 dirs = os.listdir(os.getcwd())
+
 
 wb2 = load_workbook('evolve.xlsx')
 #print wb2.get_sheet_names()
@@ -89,3 +96,4 @@ for row1 in c1:
 			row1[24].value = "Completed"
 
 wb1.save("updated_master.xlsx")
+

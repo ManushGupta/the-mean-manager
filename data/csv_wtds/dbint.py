@@ -10,7 +10,7 @@ ws1=wb1.active
 ws1.title= "Integrated Cramer Viznet M6"
 
 ws1['A1'] = 'tiger_id'
-ws1['B1'] = 'viznetM6id'
+ws1['B1'] = 'viznetm6id'
 ws1['C1'] = 'gam_id'
 ws1['H1'] = 'customer_name'
 ws1['I1'] = 'provisioner_name'

@@ -6,7 +6,7 @@ var db3 = mongoose.createConnection('mongodb://localhost/wtds');
 
 var Wtd = db3.model('Wtd',{
 	
-	tiger_id: {type : Number, default: 0},
+	tiger_id: {type : String, default: "NA"},
 	viznetm6id: {type : String, default: "NA"},
 	gam_id : {type : String, default: "NA"},
 	mrc_converted: {type : Number, default: 0},

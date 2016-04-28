@@ -87,9 +87,9 @@
 		
 
 		<tr ng-repeat='wtd in filtered = (wtds | filter: search | wtdFilter:startDate:endDate)'>
-			<td><input type="checkbox" ng-checked="wtd.isCompleted" ng-click="onCompletedClick(wtd)"/></td>
+			<td><input type="checkbox" ng-checked="wtd.isCompleted" ng-init="onGenReport(wtd)" ng-click="onCompletedClick(wtd)"/></td>
 			
-			<td ng-show="isCrammerChecked" ng-init="onGenReport(wtd)">
+			<td ng-show="isCrammerChecked">
 				<span ng-if="!wtd.isEditing"
 					class="wtds__task" 
 					ng-class="{'wtds__task--completed':wtd.isCompleted}">
@@ -144,12 +144,7 @@
 				</form>
 			</td>
 			
-			<td>
-				<span class="wtds__task" 
-					ng-class="{'wtds__task--completed':wtd.isCompleted}">
-					{{wtd.evolve_status}}
-				</span>
-			</td>
+			
 
 			<td>
 				<span ng-if="!wtd.isEditing" 
@@ -568,6 +563,15 @@
 				<form ng-submit="updateTask(wtd)">
 					<input ng-if="wtd.isEditing" class="form-control wtds__update-input" ng-value="wtd.program_manager_input" ng-model="wtd.updatedTask18">
 				</form>
+			</td>
+
+			<td>
+				<span 
+					class="wtds__task"
+					ng-class="{'wtds__task--completed':wtd.isCompleted}">
+					{{wtd.evolve_status}}
+				</span>
+				
 			</td>
 			<td>
 				<span ng-if="!wtd.isEditing"
